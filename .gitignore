@@ -59,6 +59,8 @@ __pycache__/
 /exec_transcripts/
 /trash/
 /final_project/pkl_cache/
+final_project/*.csv
+final_project/*.RData
 *.pkl
 *.png
 *.pdf
