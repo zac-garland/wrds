@@ -20,7 +20,8 @@ def _make_nb(nbformat, *, title: str, command: str):
                 f"cmd = {command!r}",
                 "print(cmd)",
                 "print()",
-                "subprocess.run(shlex.split(cmd), check=True, cwd='.')",
+                # Notebooks live under final_project/iterations/, but the runner lives in final_project/.
+                "subprocess.run(shlex.split(cmd), check=True, cwd='..')",
             ]
         )
     )
