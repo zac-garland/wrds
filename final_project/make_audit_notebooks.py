@@ -52,6 +52,16 @@ def main() -> int:
     items = [
         ("iter_001_chunk.ipynb", "Iteration 001 — chunk novelty + chunk salience", common + " --mode chunk"),
         ("iter_002_turns.ipynb", "Iteration 002 — turns novelty + chunk salience", common + " --mode turns"),
+        (
+            "iter_003_step12_turn_boundaries.ipynb",
+            "Iteration 003 — Step 12: turn boundary validation (1128909)",
+            common + " --mode chunk --checkpoint step12 --check-transcriptid 1128909",
+        ),
+        (
+            "iter_004_step11_13_15_tables.ipynb",
+            "Iteration 004 — Steps 11/13/15: raw turns + exec chunks + alignment (1128909)",
+            common + " --mode chunk --checkpoint step11_13_15 --check-transcriptid 1128909",
+        ),
     ]
 
     for fn, title, cmd in items:

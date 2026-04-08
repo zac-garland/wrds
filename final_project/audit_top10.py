@@ -39,6 +39,72 @@ DEFAULT_DEV_TICKERS = ("AAPL", "MSFT", "NVDA")
 DEFAULT_EMBEDDING_MODEL_NAME = "hashing-tfidf"
 
 
+def _print_header(title: str) -> None:
+    print(f"\n=== {title} ===\n")
+
+
+def _validate_step12_turn_boundaries(df_calls: pd.DataFrame, speaker_indices_csv: Path, tid: int) -> None:
+    """
+    CHANGE_AUDIT.md Step 12: validate transcript_to_turn boundaries on RAW text.
+    Prints the first few turns to stdout for manual comparison to R validation.
+    """
+    idx_df = nh.load_transcript_speaker_indices(speaker_indices_csv)
+    wc = nh.word_counts_for_transcript(idx_df, tid)
+    raw_txt = str(
+        df_calls.loc[df_calls["transcriptid"].astype(int) == int(tid), "full_transcript_text"].iloc[0]
+    )
+    turns = nh.transcript_to_turn(raw_txt, wc)
+    _print_header(f"Step 12 boundary check (transcriptid={tid})")
+    for i, t in enumerate(turns[:6]):
+        t0 = re.sub(r"\s+", " ", str(t)).strip()
+        print(f"{i:02d} | {t0[:120]}")
+    print(f"\n(turn count) {len(turns)}")
+
+
+def _validate_step11_13_15_tables(
+    df_calls: pd.DataFrame,
+    speaker_indices_csv: Path,
+    *,
+    tid: int,
+) -> None:
+    """
+    CHANGE_AUDIT.md Steps 11/13/15: raw turn table + exec chunks + alignment sanity.
+    """
+    raw_turn_df = nh.build_raw_turn_table(df_calls, speaker_indices_csv)
+    _print_header("Step 11 raw_turn_df sanity")
+    sub = raw_turn_df[raw_turn_df["transcriptid"].astype(int) == int(tid)]
+    print(f"raw_turn_df rows: {len(raw_turn_df):,}")
+    if not sub.empty:
+        print(f"raw_turn_df[{tid}] rows: {len(sub)}")
+        print("speaker types:", dict(sub["speakertypename"].value_counts().head(6)))
+        print("first turn:", str(sub.iloc[0]["turn_text"])[:120])
+    else:
+        print(f"raw_turn_df[{tid}] not found")
+
+    exec_chunks = nh.build_exec_chunks(raw_turn_df)
+    _print_header("Step 13 exec_chunks sanity")
+    ecs = exec_chunks[exec_chunks["transcriptid"].astype(int) == int(tid)]
+    print(f"exec_chunks rows: {len(exec_chunks):,}")
+    if not ecs.empty:
+        print(f"exec_chunks[{tid}] rows: {len(ecs)}")
+        print("first exec_text:", str(ecs.iloc[0]["exec_text"])[:120])
+        print("first context_text:", str(ecs.iloc[0]["context_text"])[:120])
+        # No row should have empty exec_text
+        empty_exec = int((ecs["exec_text"].astype(str).str.strip().str.len() == 0).sum())
+        print("empty exec_text rows:", empty_exec)
+    else:
+        print(f"exec_chunks[{tid}] not found")
+
+    _print_header("Step 15 alignment (exec_text vs chunk_text vs chunk_index)")
+    if ecs.empty:
+        return
+    n_exec = len(ecs["exec_text"].tolist())
+    n_chunk = len(ecs["chunk_text"].tolist())
+    n_idx = len(ecs["chunk_index"].tolist())
+    print(f"lengths: exec_text={n_exec}, chunk_text={n_chunk}, chunk_index={n_idx}")
+    assert n_exec == n_chunk == n_idx, "exec/chunk/index lists are not aligned"
+
+
 def _slug(items: Iterable[str]) -> str:
     return "_".join(re.sub(r"[^A-Za-z0-9]+", "_", x.strip().upper()).strip("_") for x in items)
 
@@ -292,6 +358,18 @@ def main() -> int:
     ap.add_argument("--min-words", type=int, default=8)
     ap.add_argument("--min-salience", type=float, default=0.30)
     ap.add_argument(
+        "--checkpoint",
+        choices=["none", "step12", "step11_13_15"],
+        default="none",
+        help="Print CHANGE_AUDIT.md checkpoint validations before Top-10.",
+    )
+    ap.add_argument(
+        "--check-transcriptid",
+        type=int,
+        default=1128909,
+        help="transcriptid used for checkpoint validation prints.",
+    )
+    ap.add_argument(
         "--use-dev-final-subset",
         action="store_true",
         help="If set, create/use a dev-only FINAL subset in pkl_cache/ and use that for the run.",
@@ -310,6 +388,18 @@ def main() -> int:
         # Always derive from the full FINAL.csv in final_project/ unless an absolute path was given.
         src = (here / "FINAL.csv") if final_csv.name != "FINAL.csv" else final_csv
         final_csv = _ensure_dev_final_subset(src, dev_tickers)
+
+    # Load calls once so checkpoint validators can inspect raw transcript text.
+    df_calls = nh.load_and_clean_final_csv(final_csv, min_text_len=int(args.min_text_len))
+    df_calls["ticker"] = df_calls["ticker"].astype(str).str.upper()
+    df_calls = df_calls[df_calls["ticker"].isin(set(dev_tickers))].copy()
+    df_calls = df_calls.sort_values(["ticker", "quarter"]).reset_index(drop=True)
+    df_calls, _flow = nh.apply_project_spec_sample_pipeline(df_calls)
+
+    if args.checkpoint == "step12":
+        _validate_step12_turn_boundaries(df_calls, speaker_csv, int(args.check_transcriptid))
+    elif args.checkpoint == "step11_13_15":
+        _validate_step11_13_15_tables(df_calls, speaker_csv, tid=int(args.check_transcriptid))
 
     top10 = run_top10(
         final_csv=final_csv,
