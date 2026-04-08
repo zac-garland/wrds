@@ -45,3 +45,26 @@ vignettes/*.pdf
 /notes
 /data
 /misc
+
+### macOS ###
+.DS_Store
+
+### Python / Jupyter ###
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+### Project artifacts / large outputs ###
+/analytical_ml_finance/
+/exec_transcripts/
+/trash/
+/final_project/pkl_cache/
+*.pkl
+*.png
+*.pdf
+*.pptx
+*.html
+
+### Quarto / knitr caches (nested too)
+*_cache/
+*_files/
