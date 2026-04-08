@@ -1,13 +1,25 @@
 
+#' Connect to WRDS PostgreSQL using credentials from Renviron.
+#'
+#' Set \code{WRDS_USERNAME} and \code{WRDS_PASSWORD} in your \code{.Renviron}
+#' (e.g. via \code{usethis::edit_r_environ()}). If \code{WRDS_PASSWORD} is not set,
+#' RPostgres may prompt or use \code{.pgpass}.
+#'
+#' @return A connection object from \code{RPostgres::dbConnect(Postgres(), ...)}.
 #' @export
-connect_wharton <- function(){
+connect_wharton <- function() {
   library(RPostgres)
-  dbConnect(Postgres(),
-            host='wrds-pgdata.wharton.upenn.edu',
-            port=9737,
-            dbname='wrds',
-            sslmode='require',
-            user='zkg232')
+  user <- Sys.getenv("WRDS_USERNAME", unset = "zkg232")
+  pass <- Sys.getenv("WRDS_PASSWORD", unset = "")
+  args <- list(
+    host = "wrds-pgdata.wharton.upenn.edu",
+    port = 9737L,
+    dbname = "wrds",
+    sslmode = "require",
+    user = user
+  )
+  if (nzchar(pass)) args[["password"]] <- pass
+  do.call(dbConnect, c(list(Postgres()), args))
 }
 
 check_wharton_connection <- function(){

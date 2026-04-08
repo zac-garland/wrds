@@ -41,10 +41,8 @@ vignettes/*.pdf
 # R package: bookdown caching files
 /*_files/
 
-### folders for EDA
-/notes
+### folders for EDA (keep lightweight notes in git; ignore large raw dumps)
 /data
-/misc
 
 ### macOS ###
 .DS_Store
@@ -55,17 +53,25 @@ __pycache__/
 .ipynb_checkpoints/
 
 ### Project artifacts / large outputs ###
-/analytical_ml_finance/
 /exec_transcripts/
 /trash/
 /final_project/pkl_cache/
-final_project/*.csv
+
+# Large CSV extracts (GitHub hard limit: 100MB/file)
+final_project/FINAL.csv
+final_project/aggregated_all_years_updated_event.csv
+final_project/transcript_speaker_indices.csv
+analytical_ml_finance/aggregated_all_years_updated_event.csv
+
+# Large assignment exports
+assignments/earnings_calls_full_5year.csv
+assignments/earnings_calls_full_5year_with_revenue.csv
+assignments/transcript_batches/transcripts_2013.csv
+assignments/transcript_batches/transcripts_2013_with_revenue.csv
+notes/archive/analysis_data_norm.csv
+
 final_project/*.RData
 *.pkl
-*.png
-*.pdf
-*.pptx
-*.html
 
 ### Quarto / knitr caches (nested too)
 *_cache/

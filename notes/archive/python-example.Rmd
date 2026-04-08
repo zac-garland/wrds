@@ -1,0 +1,408 @@
+---
+title: "Constructing Custom Equity Indexes Using Python and WRDS/CRSP"
+author: "Michael Sury, Department of Finance, University of Texas at Austin"
+date: "August 6, 2025"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: show
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r}
+
+
+knitr::opts_chunk$set(
+  eval = FALSE, echo = FALSE
+)
+```
+
+# Overview and Motivation
+
+Custom index construction is a foundational skill in empirical finance,
+enabling researchers to develop benchmarks tailored to specific
+hypotheses, investment mandates, or academic inquiries. This document
+demonstrates equal-, value-, and price-weighted index construction using
+Python and WRDS/CRSP data.
+
+## Project Objectives
+
+-   Query and clean CRSP monthly data (US common shares, major
+    exchanges)
+-   Incorporate delisting returns to mitigate survivorship bias\
+-   Construct three index types: Equal-weighted (EW), Value-weighted
+    (VW), Price-weighted (PW)
+-   Monthly reconstitution using top N stocks by market cap
+-   Compare against ETF benchmarks (SPY, IWM, QQQ)
+-   Analyze correlations and performance
+
+**Key Specifications:** - Filter: `shrcd ∈ {10, 11}`,
+`exchcd ∈ {1, 2, 3}` - Effective returns:
+`r_eff = (1 + r_CRSP) × (1 + r_delist) - 1` - No look-ahead bias: use
+t-1 info for selection/weighting
+
+```{python setup}
+import wrds
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from tqdm import tqdm
+from typing import List, Dict
+import warnings
+warnings.filterwarnings('ignore')
+
+# Parameters
+START_DATE, END_DATE = '2000-01-01', '2020-12-31'
+TOP_N = 100
+START_TS = pd.to_datetime(START_DATE)
+
+print(f"Period: {START_DATE} to {END_DATE} | Top {TOP_N} stocks")
+```
+
+# Data Retrieval and Cleaning
+
+## WRDS Connection
+
+```{python connect}
+db = wrds.Connection()
+print("Connected to WRDS")
+```
+
+## Core Data Functions
+
+```{python data_functions}
+def get_crsp_monthly_panel(db, start, end):
+    """Pull CRSP monthly panel with security descriptors via time-bounded join."""
+    years = range(pd.to_datetime(start).year, pd.to_datetime(end).year + 1)
+    frames = []
+    
+    for y in tqdm(years, desc="CRSP Query"):
+        chunk_start = f"{y}-01-01" if y > START_TS.year else start
+        chunk_end = f"{y}-12-31" if y < START_TS.year else end
+        
+        q = f"""
+        SELECT m.date, m.permno, m.prc, m.shrout, m.ret, n.shrcd, n.exchcd
+        FROM crsp.msf m JOIN crsp.msenames n
+          ON m.permno = n.permno 
+         AND m.date BETWEEN n.namedt AND COALESCE(n.nameendt, '9999-12-31')
+        WHERE m.date BETWEEN '{chunk_start}' AND '{chunk_end}'
+          AND n.shrcd IN (10, 11) AND n.exchcd IN (1, 2, 3)
+          AND m.prc IS NOT NULL AND m.shrout IS NOT NULL
+        ORDER BY m.date, m.permno
+        """
+        frames.append(db.raw_sql(q))
+    
+    df = pd.concat(frames, ignore_index=True)
+    df['date'] = pd.to_datetime(df['date'])
+    df['prc'] = pd.to_numeric(df['prc'], errors='coerce').abs()
+    df['shrout'] = pd.to_numeric(df['shrout'], errors='coerce') * 1000
+    df['ret'] = pd.to_numeric(df['ret'], errors='coerce')
+    df['mktcap'] = df['prc'] * df['shrout']
+    return df
+
+def get_delistings(db, start, end):
+    """Retrieve delisting returns."""
+    q = f"""
+    SELECT permno, dlstdt as date, dlret
+    FROM crsp.msedelist
+    WHERE dlstdt BETWEEN '{start}' AND '{end}' AND dlret IS NOT NULL
+    """
+    df = db.raw_sql(q)
+    df['date'] = pd.to_datetime(df['date'])
+    df['dlret'] = pd.to_numeric(df['dlret'], errors='coerce')
+    return df
+
+def add_effective_returns(panel, delist):
+    """Merge delisting returns: r_eff = (1 + r_CRSP) × (1 + r_delist) - 1"""
+    out = panel.merge(delist, on=['permno', 'date'], how='left')
+    out['ret_eff'] = (1 + out['ret'].fillna(0)) * (1 + out['dlret'].fillna(0)) - 1
+    return out
+```
+
+## Load Data
+
+```{python load_data}
+print("[1/5] Pulling CRSP panel...")
+panel = get_crsp_monthly_panel(db, START_DATE, END_DATE)
+print(f"Rows: {len(panel):,}")
+
+print("[2/5] Adding delisting returns...")
+delist = get_delistings(db, START_DATE, END_DATE)
+panel = add_effective_returns(panel, delist)
+
+print(f"Final: {panel.shape} | Securities: {panel['permno'].nunique():,}")
+print(f"Period: {panel['date'].min()} to {panel['date'].max()}")
+```
+
+# Index Construction
+
+## Mathematical Framework
+
+**Market Cap:** $mktcap_{i,t} = |prc_{i,t}| × shrout_{i,t}$
+
+**Weighting Schemes:** - **Equal-Weighted:**
+$w_{i,t-1}^{(EW)} = \frac{1}{N}$ - **Value-Weighted:**
+$w_{i,t-1}^{(VW)} = \frac{mktcap_{i,t-1}}{\sum_j mktcap_{j,t-1}}$\
+- **Price-Weighted:**
+$w_{i,t-1}^{(PW)} = \frac{|prc_{i,t-1}|}{\sum_j |prc_{j,t-1}|}$
+
+**Index Returns:** $R_t = \sum_i w_{i,t-1} × r_{i,t}$
+
+**Index Levels:** $L_t = L_{t-1} × (1 + R_t)$, $L_0 = 100$
+
+```{python index_construction}
+def build_topn_indexes(panel, top_n):
+    """Construct EW, VW, PW index levels using monthly reconstitution."""
+    panel = panel.sort_values(['date', 'permno'])
+    months = sorted(panel['date'].unique())
+    by_month = {d: g for d, g in panel.groupby('date')}
+    
+    ew_level = vw_level = pw_level = [100.0]
+    
+    for i in tqdm(range(1, len(months)), desc="Index Calculation"):
+        t_1, t = months[i-1], months[i]
+        g_t1 = by_month[t_1].dropna(subset=['mktcap', 'prc'])
+        g_t = by_month[t]
+        
+        if g_t1.empty or g_t.empty:
+            ew_level.append(ew_level[-1])
+            vw_level.append(vw_level[-1]) 
+            pw_level.append(pw_level[-1])
+            continue
+        
+        # Top-N by market cap at t-1
+        chosen = g_t1.sort_values('mktcap', ascending=False).head(top_n).set_index('permno')
+        g_t = g_t.set_index('permno')
+        common = chosen.index.intersection(g_t.index)
+        
+        if len(common) == 0:
+            ew_level.append(ew_level[-1])
+            vw_level.append(vw_level[-1])
+            pw_level.append(pw_level[-1])
+            continue
+        
+        r_t = g_t.loc[common, 'ret_eff'].astype(float)
+        
+        # Equal-Weighted
+        r_t_ew = r_t.dropna()
+        ew_gross = (1 + r_t_ew).mean() if not r_t_ew.empty else 1.0
+        
+        # Value-Weighted  
+        w_vw = chosen.loc[common, 'mktcap'].astype(float)
+        mask_vw = r_t.notna()
+        if mask_vw.any() and w_vw.loc[mask_vw].sum() > 0:
+            w_vw_norm = w_vw.loc[mask_vw] / w_vw.loc[mask_vw].sum()
+            vw_gross = ((1 + r_t.loc[mask_vw]) * w_vw_norm).sum()
+        else:
+            vw_gross = 1.0
+            
+        # Price-Weighted
+        w_pw = chosen.loc[common, 'prc'].astype(float)
+        mask_pw = r_t.notna()
+        if mask_pw.any() and w_pw.loc[mask_pw].sum() > 0:
+            w_pw_norm = w_pw.loc[mask_pw] / w_pw.loc[mask_pw].sum()
+            pw_gross = ((1 + r_t.loc[mask_pw]) * w_pw_norm).sum()
+        else:
+            pw_gross = 1.0
+        
+        # Compound levels
+        ew_level.append(ew_level[-1] * ew_gross)
+        vw_level.append(vw_level[-1] * vw_gross)
+        pw_level.append(pw_level[-1] * pw_gross)
+    
+    idx_months = pd.to_datetime(months[1:])
+    return pd.DataFrame({
+        'Equal-Weighted': ew_level[1:],
+        'Value-Weighted': vw_level[1:], 
+        'Price-Weighted': pw_level[1:]
+    }, index=idx_months)
+
+print("[3/5] Building custom indices...")
+custom_levels = build_topn_indexes(panel, TOP_N)
+print(f"Indices built: {custom_levels.shape}")
+```
+
+# ETF Benchmarks
+
+```{python etf_functions}
+def pick_permno_for_ticker(db, ticker, around_date):
+    """Find PERMNO for ticker around specific date."""
+    q = f"""
+    SELECT permno FROM crsp.msenames
+    WHERE ticker = '{ticker}' AND namedt <= '{around_date.strftime('%Y-%m-%d')}'
+      AND (nameendt >= '{around_date.strftime('%Y-%m-%d')}' OR nameendt IS NULL)
+    ORDER BY namedt DESC LIMIT 1
+    """
+    result = db.raw_sql(q)
+    return result['permno'].iloc[0] if not result.empty else None
+
+def get_etf_index(db, permno, start, end, label):
+    """Build 100-based index for ETF."""
+    q = f"""
+    SELECT date, ret FROM crsp.msf 
+    WHERE permno = {permno} AND date BETWEEN '{start}' AND '{end}'
+    ORDER BY date
+    """
+    d = db.raw_sql(q)
+    d['date'] = pd.to_datetime(d['date'])
+    d['ret'] = pd.to_numeric(d['ret'], errors='coerce').fillna(0)
+    idx = (1 + d['ret']).cumprod() * 100
+    idx.index = d['date']
+    idx.name = label
+    return idx
+
+print("[4/5] Getting ETF benchmarks...")
+etf_tickers = ['SPY', 'IWM', 'QQQ']
+etf_series = {}
+
+for tkr in etf_tickers:
+    pno = pick_permno_for_ticker(db, tkr, START_TS)
+    if pno:
+        etf_series[tkr] = get_etf_index(db, pno, START_DATE, END_DATE, f"{tkr}")
+        print(f"Retrieved {tkr}: {len(etf_series[tkr])} observations")
+```
+
+# Analysis and Visualization
+
+```{python analysis}
+def align_and_corr(levels):
+    """Align series and compute log return correlations."""
+    common = set(levels[0].index)
+    for s in levels[1:]:
+        common &= set(s.index)
+    common = sorted(common)
+    
+    aligned = [s.loc[common] for s in levels]
+    panel = pd.concat(aligned, axis=1)
+    log_ret = np.log(panel / panel.shift(1)).dropna(how='any')
+    return log_ret.corr()
+
+print("[5/5] Computing correlations...")
+all_series = [custom_levels[c] for c in custom_levels.columns] + list(etf_series.values())
+corr_mat = align_and_corr(all_series)
+print("Correlation matrix computed")
+```
+
+## Performance Visualization
+
+```{python plots, fig.width=12, fig.height=10}
+fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(15, 12))
+
+# Plot 1: All indices
+for col in custom_levels.columns:
+    ax1.plot(custom_levels.index, custom_levels[col], label=f"Custom {col}", linewidth=2)
+for name, series in etf_series.items():
+    common_dates = custom_levels.index.intersection(series.index)
+    if len(common_dates) > 0:
+        ax1.plot(common_dates, series.loc[common_dates], 
+                label=f"{name}", linestyle='--', alpha=0.8)
+ax1.set_title(f'Index Performance (Top-{TOP_N} vs ETFs)')
+ax1.set_ylabel('Index Level (Base=100)')
+ax1.legend()
+ax1.grid(True, alpha=0.3)
+
+# Plot 2: Custom only
+for col in custom_levels.columns:
+    ax2.plot(custom_levels.index, custom_levels[col], label=col, linewidth=2)
+ax2.set_title('Custom Index Comparison')
+ax2.set_ylabel('Index Level')
+ax2.legend()
+ax2.grid(True, alpha=0.3)
+
+# Plot 3: Returns distribution
+returns = custom_levels.pct_change().dropna()
+returns.hist(bins=50, alpha=0.7, ax=ax3)
+ax3.set_title('Monthly Return Distributions')
+ax3.set_xlabel('Monthly Return')
+
+# Plot 4: Correlation heatmap
+im = ax4.imshow(corr_mat.values, cmap='RdBu_r', aspect='auto', vmin=-1, vmax=1)
+ax4.set_xticks(range(len(corr_mat.columns)))
+ax4.set_yticks(range(len(corr_mat.index)))
+ax4.set_xticklabels(corr_mat.columns, rotation=45, ha='right')
+ax4.set_yticklabels(corr_mat.index)
+ax4.set_title('Correlation Matrix (Log Returns)')
+
+# Add correlation values
+for i in range(len(corr_mat.index)):
+    for j in range(len(corr_mat.columns)):
+        ax4.text(j, i, f'{corr_mat.iloc[i, j]:.2f}', 
+                ha='center', va='center', fontsize=8)
+
+plt.tight_layout()
+plt.show()
+```
+
+## Performance Summary
+
+```{python performance}
+returns = custom_levels.pct_change().dropna()
+
+performance_stats = pd.DataFrame({
+    'Annualized Return (%)': ((1 + returns.mean())**12 - 1) * 100,
+    'Annualized Volatility (%)': returns.std() * np.sqrt(12) * 100,
+    'Sharpe Ratio': ((1 + returns.mean())**12 - 1) / (returns.std() * np.sqrt(12)),
+    'Max Drawdown (%)': ((custom_levels / custom_levels.cummax() - 1).min()) * 100,
+    'Final Level': custom_levels.iloc[-1]
+})
+
+print("Performance Statistics:")
+print("=" * 50)
+print(performance_stats.round(2))
+
+best_performer = performance_stats['Annualized Return (%)'].idxmax()
+total_return = (custom_levels[best_performer].iloc[-1] / 100 - 1) * 100
+print(f"\nBest Performer: {best_performer}")
+print(f"Total Return: {total_return:.1f}%")
+
+print("\nCorrelation Matrix:")
+print(corr_mat.round(3))
+```
+
+```{python cleanup}
+db.close()
+print("WRDS connection closed")
+```
+
+# Key Findings and Extensions
+
+## Results Summary
+
+-   Successfully constructed three custom equity indices using
+    top-{`r py$TOP_N`} stocks
+-   Incorporated delisting returns to mitigate survivorship bias
+-   Applied monthly reconstitution using lagged market cap information
+-   Compared performance against major ETF benchmarks
+
+## Extensions and Best Practices
+
+**Potential Extensions:** - Alternative reconstitution frequencies
+(daily, quarterly) - Transaction cost analysis and turnover metrics\
+- Factor exposure analysis and style drift examination - Risk metrics
+(VaR, conditional VaR) - Sector constraints and industry-neutral indices
+
+**Best Practices:** 1. **Data Validation:** Verify constituent selection
+and return calculations 2. **Bias Mitigation:** Use lagged information,
+include delisting returns 3. **Scalability:** Time-windowed queries for
+large datasets 4. **Documentation:** Clear methodology and assumption
+documentation 5. **Testing:** Validate on small samples before full
+analysis
+
+## Educational Value
+
+This exercise demonstrates: - Practical implementation of academic index
+construction concepts - Real-world data challenges and bias mitigation
+techniques - Performance attribution across different weighting
+schemes - Benchmark analysis and correlation interpretation
+
+The framework provides a foundation for various research projects,
+portfolio strategies, and empirical finance analyses.
+
+------------------------------------------------------------------------
+
+*Created for MSBA Finance Analytics curriculum, University of Texas at
+Austin*

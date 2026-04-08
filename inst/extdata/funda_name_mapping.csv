@@ -1,0 +1,975 @@
+variable_name,snake_name,type,description
+gvkey,gvkey,Char,(gvkey) Global Company Key
+conm,company_name,Char,(conm) Company Name
+tic,ticker,Char,(tic) Ticker Symbol
+cusip,cusip,Char,(cusip) CUSIP
+cik,cik,Char,(cik) CIK Number
+exchg,stock_exchange_code,Int,(exchg) Stock Exchange Code
+fyr,fiscal_year_end_month,Int,(fyr) Fiscal Year-end Month
+fic,current_iso_country_code_incorporation,Char,(fic) Current ISO Country Code - Incorporation
+add1,address_line_1,Char,(add1) Address Line 1
+add2,address_line_2,Char,(add2) Address Line 2
+add3,address_line_3,Char,(add3) Address Line 3
+add4,address_line_4,Char,(add4) Address Line 4
+addzip,postal_code,Char,(addzip) Postal Code
+busdesc,s_and_p_business_description,Char,(busdesc) S&P Business Description
+city,city,Char,(city) City
+conml,company_legal_name,Char,(conml) Company Legal Name
+county,county_code,Char,(county) County Code
+dldte,research_company_deletion_date,Date,(dldte) Research Company Deletion Date
+dlrsn,research_co_reason_for_deletion,Char,(dlrsn) Research Co Reason for Deletion
+ein,employer_identification_number,Char,(ein) Employer Identification Number
+fax,fax_number,Char,(fax) Fax Number
+fyrc,fiscal_year_end_month_current,Int,(fyrc) Current Fiscal Year End Month
+ggroup,gic_groups,Char,(ggroup) GIC Groups
+gind,gic_industries,Char,(gind) GIC Industries
+gsector,gic_sectors,Char,(gsector) GIC Sectors
+gsubind,gic_sub_industries,Char,(gsubind) GIC Sub-Industries
+idbflag,international_domestic_both_indicator,Char,"(idbflag) International, Domestic, Both Indicator"
+incorp,current_state_province_of_incorporation_code,Char,(incorp) Current State/Province of Incorporation Code
+ipodate,company_initial_public_offering_date,Date,(ipodate) Company Initial Public Offering Date
+loc,current_iso_country_code_headquarters,Char,(loc) Current ISO Country Code - Headquarters
+naics,north_american_industry_classification_code,Char,(naics) North American Industry Classification Code
+phone,phone_number,Char,(phone) Phone Number
+prican,current_primary_issue_tag_canada,Char,(prican) Current Primary Issue Tag - Canada
+prirow,primary_issue_tag_rest_of_world,Char,(prirow) Primary Issue Tag - Rest of World
+priusa,current_primary_issue_tag_us,Char,(priusa) Current Primary Issue Tag - US
+sic,standard_industry_classification_code,Char,(sic) Standard Industry Classification Code
+spcindcd,s_and_p_industry_sector_code,Int,(spcindcd) S&P Industry Sector Code
+spcseccd,s_and_p_economic_sector_code,Int,(spcseccd) S&P Economic Sector Code
+spcsrc,s_and_p_quality_ranking_current,Char,(spcsrc) S&P Quality Ranking - Current
+state,state_province,Char,(state) State/Province
+stko,stock_ownership_code,Int,(stko) Stock Ownership Code
+weburl,web_url,Char,(weburl) Web URL
+acctchg,adoption_of_accounting_changes,Char,(acctchg) Adoption of Accounting Changes
+acctstd,accounting_standard,Char,(acctstd) Accounting Standard
+acqmeth,acquisition_method,Char,(acqmeth) Acquisition Method
+adrr,adr_ratio,Decimal,(adrr) ADR Ratio
+ajex,adjustment_factor_company_cumulative_by_ex_date,Decimal,(ajex) Adjustment Factor (Company) - Cumulative by Ex-Date
+ajp,adjustment_factor_company_cumulative_bypay_date,Decimal,(ajp) Adjustment Factor (Company) - Cumulative byPay-Date
+apdedate,actual_period_end_date,Date,(apdedate) Actual Period End date
+bspr,balance_sheet_presentation,Char,(bspr) Balance Sheet Presentation
+compst,comparability_status,Char,(compst) Comparability Status
+curncd,native_currency_code,Char,(curncd) Native Currency Code
+currtr,currency_translation_rate,Decimal,(currtr) Currency Translation Rate
+curuscn,us_canadian_translation_rate,Decimal,(curuscn) US Canadian Translation Rate
+fdate,final_date,Date,(fdate) Final Date
+final,final_indicator_flag,Char,(final) Final Indicator Flag
+fyear,fiscal_year,Int,(fyear) Data Year - Fiscal
+ismod,income_statement_model_number,Int,(ismod) Income Statement Model Number
+ltcm,long_term_contract_method,Char,(ltcm) Long Term Contract Method
+ogm,oil_and_gas_method,Char,(ogm) OIL & GAS METHOD
+pdate,preliminary_date,Date,(pdate) Preliminary Date
+pddur,period_duration,Int,(pddur) Period Duration
+scf,cash_flow_format,Int,(scf) Cash Flow Format
+src,source_document,Int,(src) Source Document
+stalt,status_alert,Char,(stalt) Status Alert
+udpl,utility_liberalized_depreciation_code,Char,(udpl) Utility - Liberalized Depreciation Code
+upd,update_code,Int,(upd) Update Code
+acco,acceptances_outstanding,Decimal,(acco) Acceptances Outstanding
+acdo,current_assets_of_discontinued_operations,Decimal,(acdo) Current Assets of Discontinued Operations
+aco,current_assets_other_total,Decimal,(aco) Current Assets - Other - Total
+acodo,other_current_assets_excl_discontinued_operations,Decimal,(acodo) Other Current Assets Excl Discontinued Operations
+acominc,accumulated_other_comprehensive_income_loss,Decimal,(acominc) Accumulated Other Comprehensive Income (Loss)
+acox,current_assets_other_sundry,Decimal,(acox) Current Assets - Other - Sundry
+acoxar,current_assets_other_total_as_reported,Decimal,(acoxar) Current Assets - Other - Total As Reported
+act,current_assets_total,Decimal,(act) Current Assets - Total
+aedi,accrued_expenses_and_deferred_income,Decimal,(aedi) Accrued Expenses and Deferred Income
+aldo,long_term_assets_of_discontinued_operations,Decimal,(aldo) Long-term Assets of Discontinued Operations
+ao,assets_other,Decimal,(ao) Assets - Other
+aocidergl,accum_other_comp_inc_derivatives_unrealized_gain_loss,Decimal,(aocidergl) Accum Other Comp Inc - Derivatives Unrealized Gain/Loss
+aociother,accum_other_comp_inc_other_adjustments,Decimal,(aociother) Accum Other Comp Inc - Other Adjustments
+aocipen,accum_other_comp_inc_min_pension_liab_adj,Decimal,(aocipen) Accum Other Comp Inc - Min Pension Liab Adj
+aocisecgl,accum_other_comp_inc_unreal_g_l_ret_int_in_sec_assets,Decimal,(aocisecgl) Accum Other Comp Inc - Unreal G/L Ret Int in Sec Assets
+aodo,other_assets_excluding_discontinued_operations,Decimal,(aodo) Other Assets excluding Discontinued Operations
+aox,assets_other_sundry,Decimal,(aox) Assets - Other - Sundry
+ap,accounts_payable_trade,Decimal,(ap) Accounts Payable - Trade
+apb,accounts_payable_creditors_brokers_dealers_and_clearing_organizations,Decimal,"(apb) Accounts Payable/Creditors - Brokers, Dealers, and Clearing Organizations"
+apc,accounts_payable_creditors_customer,Decimal,(apc) Accounts Payable/Creditors - Customer
+apofs,accounts_payable_creditors_other_fs,Decimal,(apofs) Accounts Payable/Creditors - Other - FS
+arb,accounts_receivable_debtors_brokers_dealers_and_clearing_organizations,Decimal,"(arb) Accounts Receivable/Debtors - Brokers, Dealers, and Clearing Organizations"
+arc,accounts_receivable_debtors_customer,Decimal,(arc) Accounts Receivable/Debtors - Customer
+artfs,accounts_receivable_debtors_total,Decimal,(artfs) Accounts Receivable/Debtors - Total
+at,assets_total,Decimal,(at) Assets - Total
+bast,average_short_term_borrowings,Decimal,(bast) Average Short-Term Borrowings
+bkvlps,book_value_per_share,Decimal,(bkvlps) Book Value Per Share
+ca,customers_acceptance,Decimal,(ca) Customers'' Acceptance
+caps,capital_surplus_share_premium_reserve,Decimal,(caps) Capital Surplus/Share Premium Reserve
+cb,compensating_balance,Decimal,(cb) Compensating Balance
+ceq,common_ordinary_equity_total,Decimal,(ceq) Common/Ordinary Equity - Total
+ceql,common_equity_liquidation_value,Decimal,(ceql) Common Equity - Liquidation Value
+ceqt,common_equity_tangible,Decimal,(ceqt) Common Equity - Tangible
+ch,cash,Decimal,(ch) Cash
+che,cash_and_short_term_investments,Decimal,(che) Cash and Short-Term Investments
+chs,cash_and_deposits_segregated,Decimal,(chs) Cash and Deposits - Segregated
+cld2,capitalized_leases_due_in_2nd_year,Decimal,(cld2) Capitalized Leases - Due in 2nd Year
+cld3,capitalized_leases_due_in_3rd_year,Decimal,(cld3) Capitalized Leases - Due in 3rd Year
+cld4,capitalized_leases_due_in_4th_year,Decimal,(cld4) Capitalized Leases - Due in 4th Year
+cld5,capitalized_leases_due_in_5th_year,Decimal,(cld5) Capitalized Leases - Due in 5th Year
+clfc,contingent_liabilities_forward_and_future_contracts,Decimal,(clfc) Contingent Liabilities - Forward and Future Contracts
+clfx,contingent_liabilities_foreign_exchange_commitments,Decimal,(clfx) Contingent Liabilities - Foreign Exchange Commitments
+clg,contingent_liabilities_guarantees,Decimal,(clg) Contingent Liabilities - Guarantees
+clis,contingent_liabilities_interest_rate_swaps,Decimal,(clis) Contingent Liabilities - Interest Rate Swaps
+cll,contingent_liabilities_letters_of_credit,Decimal,(cll) Contingent Liabilities - Letters of Credit
+cllc,contingent_liabilities_loan_commitments,Decimal,(cllc) Contingent Liabilities - Loan Commitments
+clo,contingent_liabilities_other,Decimal,(clo) Contingent Liabilities - Other
+clrll,credit_loss_reserve_allocated_for_ldc_loans,Decimal,(clrll) Credit Loss Reserve Allocated for LDC Loans
+clt,contingent_liabilities_total,Decimal,(clt) Contingent Liabilities - Total
+cmp,commercial_paper,Decimal,(cmp) Commercial Paper
+crv,consolidation_reserves,Decimal,(crv) Consolidation Reserves
+crvnli,reserves_for_claims_losses_nonlife_insurance,Decimal,(crvnli) Reserves for Claims (Losses) - Nonlife (Insurance)
+cstk,common_ordinary_stock_capital,Decimal,(cstk) Common/Ordinary Stock (Capital)
+cstkcv,common_stock_carrying_value,Decimal,(cstkcv) Common Stock-Carrying Value
+dc,deferred_charges,Decimal,(dc) Deferred Charges
+dclo,debt_capitalized_lease_obligations,Decimal,(dclo) Debt - Capitalized Lease Obligations
+dcom,deferred_compensation,Decimal,(dcom) Deferred Compensation
+dcpstk,convertible_debt_and_preferred_stock,Decimal,(dcpstk) Convertible Debt and Preferred Stock
+dcs,debt_consolidated_subsidiary,Decimal,(dcs) Debt - Consolidated Subsidiary
+dcvsr,debt_senior_convertible,Decimal,(dcvsr) Debt - Senior Convertible
+dcvsub,debt_subordinated_convertible,Decimal,(dcvsub) Debt - Subordinated Convertible
+dcvt,debt_convertible,Decimal,(dcvt) Debt - Convertible
+dd,debt_debentures_dd,Decimal,(dd) Debt - Debentures
+dd1,long_term_debt_due_in_one_year,Decimal,(dd1) Long-Term Debt Due in One Year
+dd2,debt_due_in_2nd_year,Decimal,(dd2) Debt - Due in 2nd Year
+dd3,debt_due_in_3rd_year,Decimal,(dd3) Debt - Due in 3rd Year
+dd4,debt_due_in_4th_year,Decimal,(dd4) Debt - Due in 4th Year
+dd5,debt_due_in_5th_year,Decimal,(dd5) Debt - Due in 5th Year
+dfpac,deferred_policy_acquisition_costs,Decimal,(dfpac) Deferred Policy Acquisition Costs
+dfs,debt_finance_subsidiary,Decimal,(dfs) Debt - Finance Subsidiary
+dlc,debt_in_current_liabilities_total,Decimal,(dlc) Debt in Current Liabilities - Total
+dlto,other_long_term_debt,Decimal,(dlto) Other Long-term Debt
+dltp,long_term_debt_tied_to_prime,Decimal,(dltp) Long-Term Debt - Tied to Prime
+dltsub,long_term_debt_subordinated,Decimal,(dltsub) Long-Term Debt - Subordinated
+dltt,long_term_debt_total,Decimal,(dltt) Long-Term Debt - Total
+dm,debt_mortgages_and_other_secured,Decimal,(dm) Debt - Mortgages & Other Secured
+dn,debt_notes,Decimal,(dn) Debt - Notes
+dpacb,depreciation_accumulated_buildings,Decimal,(dpacb) Depreciation (Accumulated) - Buildings
+dpacc,depreciation_accumulated_construction_in_progress,Decimal,(dpacc) Depreciation (Accumulated) - Construction in Progress
+dpacli,depreciation_accumulated_land_and_improvements,Decimal,(dpacli) Depreciation (Accumulated) - Land and Improvements
+dpacls,depreciation_accumulated_leases,Decimal,(dpacls) Depreciation (Accumulated) - Leases
+dpacme,depreciation_accumulated_machinery_and_equipment,Decimal,(dpacme) Depreciation (Accumulated) - Machinery and Equipment
+dpacnr,depreciation_accumulated_natural_resources,Decimal,(dpacnr) Depreciation (Accumulated) - Natural Resources
+dpaco,depreciation_accumulated_other,Decimal,(dpaco) Depreciation (Accumulated) - Other
+dpacre,accumulated_depreciation_of_re_property,Decimal,(dpacre) Accumulated Depreciation of RE Property
+dpact,depreciation_depletion_and_amortization_accumulated,Decimal,"(dpact) Depreciation, Depletion and Amortization (Accumulated)"
+dpdc,deposits_demand_customer,Decimal,(dpdc) Deposits - Demand - Customer
+dpltb,deposits_long_term_time_bank,Decimal,(dpltb) Deposits - Long-Term Time - Bank
+dpsc,deposits_savings_customer,Decimal,(dpsc) Deposits - Savings - Customer
+dpstb,deposits_short_term_demand_bank,Decimal,(dpstb) Deposits - Short-Term Demand - Bank
+dptb,deposits_total_banks,Decimal,(dptb) Deposits - Total - Banks
+dptc,deposits_total_customer,Decimal,(dptc) Deposits - Total - Customer
+dptic,deposits_time_customer,Decimal,(dptic) Deposits - Time - Customer
+dpvieb,depreciation_accumulated_ending_balance_schedule_vi,Decimal,(dpvieb) Depreciation (Accumulated) - Ending Balance (Schedule VI)
+dpvio,depreciation_accumulated_other_changes_schedule_vi,Decimal,(dpvio) Depreciation (Accumulated) - Other Changes (Schedule VI)
+dpvir,depreciation_accumulated_retirements_schedule_vi,Decimal,(dpvir) Depreciation (Accumulated) - Retirements (Schedule VI)
+drc,deferred_revenue_current,Decimal,(drc) Deferred Revenue - Current
+drci,deduction_from_policy_and_claims_reserves_for_reinsurance_ceded,Decimal,(drci) Deduction From Policy and Claims Reserves for Reinsurance Ceded
+drlt,deferred_revenue_long_term,Decimal,(drlt) Deferred Revenue - Long-term
+ds,debt_subordinated,Decimal,(ds) Debt-Subordinated
+dudd,debt_unamortized_debt_discount_and_other,Decimal,(dudd) Debt - Unamortized Debt Discount and Other
+dvpa,preferred_dividends_in_arrears,Decimal,(dvpa) Preferred Dividends in Arrears
+dvpibb,depreciation_accumulated_beginning_balance_schedule_vi,Decimal,(dvpibb) Depreciation (Accumulated) - Beginning Balance (Schedule VI)
+dxd2,debt_excl_capitalized_leases_due_in_2nd_year,Decimal,(dxd2) Debt (excl Capitalized Leases) - Due in 2nd Year
+dxd3,debt_excl_capitalized_leases_due_in_3rd_year,Decimal,(dxd3) Debt (excl Capitalized Leases) - Due in 3rd Year
+dxd4,debt_excl_capitalized_leases_due_in_4th_year,Decimal,(dxd4) Debt (excl Capitalized Leases) - Due in 4th Year
+dxd5,debt_excl_capitalized_leases_due_in_5th_year,Decimal,(dxd5) Debt (excl Capitalized Leases) - Due in 5th Year
+ea,exchange_adjustments_assets,Decimal,(ea) Exchange Adjustments (Assets)
+esopct,common_esop_obligation_total,Decimal,(esopct) Common ESOP Obligation - Total
+esopdlt,esop_debt_long_term,Decimal,(esopdlt) ESOP Debt - Long Term
+esopnr,preferred_esop_obligation_non_redeemable,Decimal,(esopnr) Preferred ESOP Obligation - Non-Redeemable
+esopr,preferred_esop_obligation_redeemable,Decimal,(esopr) Preferred ESOP Obligation - Redeemable
+esopt,preferred_esop_obligation_total,Decimal,(esopt) Preferred ESOP Obligation - Total
+excadj,exchange_adjustments_liabilities,Decimal,(excadj) Exchange Adjustments (Liabilities)
+fatb,property_plant_and_equipment_buildings_at_cost,Decimal,"(fatb) Property, Plant, and Equipment - Buildings at Cost"
+fatc,property_plant_and_equipment_construction_in_progress_at_cost,Decimal,"(fatc) Property, Plant, and Equipment - Construction in Progress at Cost"
+fate,property_plant_and_equipment_machinery_and_equipment_at_cost,Decimal,"(fate) Property, Plant, and Equipment - Machinery and Equipment at Cost"
+fatl,property_plant_and_equipment_leases_at_cost,Decimal,"(fatl) Property, Plant, and Equipment - Leases at Cost"
+fatn,property_plant_and_equipment_natural_resources_at_cost,Decimal,"(fatn) Property, Plant, and Equipment - Natural Resources at Cost"
+fato,property_plant_and_equipment_other_at_cost,Decimal,"(fato) Property, Plant, and Equipment - Other at Cost"
+fatp,property_plant_and_equipment_land_and_improvements_at_cost,Decimal,"(fatp) Property, Plant, and Equipment - Land and Improvements at Cost"
+fdfr,federal_funds_purchased,Decimal,(fdfr) Federal Funds Purchased
+fea,foreign_exchange_assets,Decimal,(fea) Foreign Exchange Assets
+fel,foreign_exchange_liabilities,Decimal,(fel) Foreign Exchange Liabilities
+ffs,federal_funds_sold,Decimal,(ffs) Federal Funds Sold
+gdwl,goodwill,Decimal,(gdwl) Goodwill
+geqrv,grants_equity_reserves,Decimal,(geqrv) Grants - Equity Reserves
+govgr,government_grants,Decimal,(govgr) Government Grants
+iaeq,investment_assets_equity_securities_insurance,Decimal,(iaeq) Investment Assets - Equity Securities (Insurance)
+iaeqci,investment_assets_insurance_equity_securities_cost,Decimal,(iaeqci) Investment Assets (Insurance) - Equity Securities (Cost)
+iaeqmi,investment_assets_insurance_equity_securities_market,Decimal,(iaeqmi) Investment Assets (Insurance) - Equity Securities (Market)
+iafici,investment_assets_insurance_fixed_income_securities_cost,Decimal,(iafici) Investment Assets (Insurance) - Fixed Income Securities (Cost)
+iafxi,investment_assets_fixed_income_securities_insurance,Decimal,(iafxi) Investment Assets - Fixed Income Securities (Insurance)
+iafxmi,investment_assets_insurance_fixed_income_securities_market,Decimal,(iafxmi) Investment Assets (Insurance) - Fixed Income Securities (Market)
+iali,investment_assets_insurance_listed_securities_total,Decimal,(iali) Investment Assets (Insurance) - Listed Securities-Total
+ialoi,investment_assets_loans_other_insurance,Decimal,(ialoi) Investment Assets - Loans - Other (Insurance)
+ialti,investment_assets_loans_total_insurance,Decimal,(ialti) Investment Assets - Loans - Total (Insurance)
+iamli,investment_assets_mortgage_loans_insurance,Decimal,(iamli) Investment Assets - Mortgage Loans (Insurance)
+iaoi,investment_assets_other_insurance,Decimal,(iaoi) Investment Assets - Other (Insurance)
+iapli,investment_assets_policy_loans_insurance,Decimal,(iapli) Investment Assets - Policy Loans (Insurance)
+iarei,investment_assets_real_estate_insurance,Decimal,(iarei) Investment Assets - Real Estate (Insurance)
+iasci,investment_assets_insurance_securities_sundry_cost,Decimal,(iasci) Investment Assets (Insurance) - Securities - Sundry (Cost)
+iasmi,investment_assets_insurance_securities_sundry_market,Decimal,(iasmi) Investment Assets (Insurance) - Securities - Sundry (Market)
+iassi,investment_assets_securities_sundry_insurance,Decimal,(iassi) Investment Assets - Securities - Sundry (Insurance)
+iasti,investment_assets_securities_total_insurance,Decimal,(iasti) Investment Assets - Securities - Total (Insurance)
+iatci,investment_assets_insurance_securities_total_cost,Decimal,(iatci) Investment Assets (Insurance) - Securities - Total (Cost)
+iati,investment_assets_total_insurance,Decimal,(iati) Investment Assets - Total (Insurance)
+iatmi,investment_assets_insurance_securities_total_market,Decimal,(iatmi) Investment Assets (Insurance) - Securities - Total (Market)
+iaui,investment_assets_insurance_unlisted_securities_total,Decimal,(iaui) Investment Assets (Insurance) - Unlisted Securities - Total
+icapt,invested_capital_total,Decimal,(icapt) Invested Capital - Total
+intan,intangible_assets_total,Decimal,(intan) Intangible Assets - Total
+intano,other_intangibles,Decimal,(intano) Other Intangibles
+invfg,inventories_finished_goods,Decimal,(invfg) Inventories - Finished Goods
+invo,inventories_other,Decimal,(invo) Inventories - Other
+invofs,inventory_stock_other,Decimal,(invofs) Inventory/Stock - Other
+invreh,inventory_stock_real_estate_held_for_development,Decimal,(invreh) Inventory/Stock - Real Estate Held for Development
+invrei,inventory_stock_real_estate_under_development,Decimal,(invrei) Inventory/Stock - Real Estate Under Development
+invres,inventory_stock_real_estate_held_for_sale,Decimal,(invres) Inventory/Stock - Real Estate Held for Sale
+invrm,inventories_raw_materials,Decimal,(invrm) Inventories - Raw Materials
+invt,inventories_total,Decimal,(invt) Inventories - Total
+invwip,inventories_work_in_process,Decimal,(invwip) Inventories - Work In Process
+ip,investment_property,Decimal,(ip) Investment Property
+ipc,investment_property_cost,Decimal,(ipc) Investment Property (Cost)
+ipv,investment_property_valuation,Decimal,(ipv) Investment Property (Valuation)
+iseq,investment_securities_equity,Decimal,(iseq) Investment Securities - Equity
+iseqc,investment_securities_equity_cost,Decimal,(iseqc) Investment Securities - Equity (Cost)
+iseqm,investment_securities_equity_market,Decimal,(iseqm) Investment Securities - Equity (Market)
+isfi,investment_securities_fixed_income,Decimal,(isfi) Investment Securities - Fixed Income
+isfxc,investment_securities_fixed_income_cost,Decimal,(isfxc) Investment Securities - Fixed Income (Cost)
+isfxm,investment_securities_fixed_income_market,Decimal,(isfxm) Investment Securities - Fixed Income (Market)
+islg,investment_securities_local_governments,Decimal,(islg) Investment Securities - Local Governments
+islgc,investment_securities_local_governments_cost,Decimal,(islgc) Investment Securities - Local Governments (Cost)
+islgm,investment_securities_local_governments_market,Decimal,(islgm) Investment Securities - Local Governments (Market)
+islt,investment_securities_listed_total,Decimal,(islt) Investment Securities - Listed - Total
+isng,investment_securities_national_governments,Decimal,(isng) Investment Securities - National Governments
+isngc,investment_securities_national_governments_cost,Decimal,(isngc) Investment Securities - National Governments (Cost)
+isngm,investment_securities_national_governments_market,Decimal,(isngm) Investment Securities - National Governments (Market)
+isotc,invetsment_securities_other_cost,Decimal,(isotc) Invetsment Securities - Other (Cost)
+isoth,investment_securities_other,Decimal,(isoth) Investment Securities - Other
+isotm,invetsment_securities_other_market,Decimal,(isotm) Invetsment Securities - Other (Market)
+issc,investment_securities_sundry_cost,Decimal,(issc) Investment Securities - Sundry (Cost)
+issm,investment_securities_sundry_market,Decimal,(issm) Investment Securities - Sundry (Market)
+issu,investment_securities_sundry,Decimal,(issu) Investment Securities - Sundry
+ist,investment_securities_total,Decimal,(ist) Investment Securities -Total
+istc,investment_securities_total_cost,Decimal,(istc) Investment Securities - Total (Cost)
+istm,investment_securities_total_market,Decimal,(istm) Investment Securities - Total (Market)
+isut,investment_securities_unlisted_total,Decimal,(isut) Investment Securities - Unlisted - Total
+itcb,investment_tax_credit_balance_sheet,Decimal,(itcb) Investment Tax Credit (Balance Sheet)
+ivaeq,investment_and_advances_equity,Decimal,(ivaeq) Investment and Advances - Equity
+ivao,investment_and_advances_other,Decimal,(ivao) Investment and Advances - Other
+ivgod,investments_grants_and_other_deductions,Decimal,(ivgod) Investments Grants and Other Deductions
+ivpt,investments_permanent_total,Decimal,(ivpt) Investments - Permanent - Total
+ivst,short_term_investments_total,Decimal,(ivst) Short-Term Investments - Total
+lcabg,loans_claims_advances_banks_and_government_total,Decimal,(lcabg) Loans/Claims/Advances - Banks and Government - Total
+lcacl,loans_claims_advances_commercial,Decimal,(lcacl) Loans/Claims/Advances - Commercial
+lcacr,loans_claims_advances_consumer,Decimal,(lcacr) Loans/Claims/Advances - Consumer
+lcag,loans_claims_advances_government,Decimal,(lcag) Loans/Claims/Advances - Government
+lcal,loans_claims_advances_lease,Decimal,(lcal) Loans/Claims/Advances - Lease
+lcalt,loans_claims_advances_long_term_banks,Decimal,(lcalt) Loans/Claims/Advances - Long-Term (Banks)
+lcam,loans_claims_advances_mortgage,Decimal,(lcam) Loans/Claims/Advances - Mortgage
+lcao,loans_claims_advances_other,Decimal,(lcao) Loans/Claims/Advances - Other
+lcast,loans_claims_advances_short_term_banks,Decimal,(lcast) Loans/Claims/Advances - Short-Term - Banks
+lcat,loans_claims_advances_total,Decimal,(lcat) Loans/Claims/Advances - Total
+lco,current_liabilities_other_total,Decimal,(lco) Current Liabilities - Other - Total
+lcox,current_liabilities_other_sundry,Decimal,(lcox) Current Liabilities - Other - Sundry
+lcoxar,current_liabilities_other_total_as_reported,Decimal,(lcoxar) Current Liabilities - Other - Total As Reported
+lcoxdr,current_liabilities_other_excluding_deferred_revenue,Decimal,(lcoxdr) Current Liabilities - Other - Excluding Deferred Revenue
+lct,current_liabilities_total,Decimal,(lct) Current Liabilities - Total
+lcuacu,loans_claims_advances_customer_total,Decimal,(lcuacu) Loans/Claims/Advances - Customer - Total
+lif,life_insurance_in_force,Decimal,(lif) Life Insurance in Force
+lifr,lifo_reserve,Decimal,(lifr) LIFO Reserve
+lloml,ldc_loans_outstanding_medium_and_long_term,Decimal,(lloml) LDC Loans Outstanding - Medium and Long-Term
+lloo,ldc_loans_outstanding_other,Decimal,(lloo) LDC Loans Outstanding - Other
+llot,ldc_loans_outstanding_total,Decimal,(llot) LDC Loans Outstanding - Total
+lo,liabilities_other_total,Decimal,(lo) Liabilities - Other - Total
+loxdr,liabilities_other_excluding_deferred_revenue,Decimal,(loxdr) Liabilities - Other - Excluding Deferred Revenue
+lrv,legal_reserves,Decimal,(lrv) Legal Reserves
+ls,liabilities_other_sundry,Decimal,(ls) Liabilities - Other - Sundry
+lse,liabilities_and_stockholders_equity_total,Decimal,(lse) Liabilities and Stockholders Equity - Total
+lt,liabilities_total,Decimal,(lt) Liabilities - Total
+mib,noncontrolling_interest_balance_sheet,Decimal,(mib) Noncontrolling Interest (Balance Sheet)
+mrc1,rental_commitments_minimum_1st_year,Decimal,(mrc1) Rental Commitments - Minimum - 1st Year
+mrc2,rental_commitments_minimum_2nd_year,Decimal,(mrc2) Rental Commitments - Minimum - 2nd Year
+mrc3,rental_commitments_minimum_3rd_year,Decimal,(mrc3) Rental Commitments - Minimum - 3rd Year
+mrc4,rental_commitments_minimum_4th_year,Decimal,(mrc4) Rental Commitments - Minimum - 4th Year
+mrc5,rental_commitments_minimum_5th_year,Decimal,(mrc5) Rental Commitments - Minimum - 5th Year
+mrct,rental_commitments_minimum_5_year_total,Decimal,(mrct) Rental Commitments - Minimum - 5 Year Total
+mrcta,thereafter_portion_of_leases,Decimal,(mrcta) Thereafter Portion of Leases
+msa,marketable_securities_adjustment,Decimal,(msa) Marketable Securities Adjustment
+msvrv,mandatory_securities_valuation_reserve_statutory,Decimal,(msvrv) Mandatory Securities Valuation Reserve (Statutory)
+mtl,loans_from_securities_finance_companies_for_margin_transactions,Decimal,(mtl) Loans From Securities Finance Companies for Margin Transactions
+nat,nonadmitted_assets_total_statutory,Decimal,(nat) Nonadmitted Assets - Total (Statutory)
+np,notes_payable_short_term_borrowings,Decimal,(np) Notes Payable - Short-Term Borrowings
+npanl,nonperforming_assets_nonaccrual_loans,Decimal,(npanl) Nonperforming Assets - Nonaccrual Loans
+npaore,nonperforming_assets_other_real_estate_owned,Decimal,(npaore) Nonperforming Assets - Other Real Estate Owned
+nparl,nonperforming_assets_restructured_loans,Decimal,(nparl) Nonperforming Assets - Restructured Loans
+npat,nonperforming_assets_total,Decimal,(npat) Nonperforming Assets - Total
+ob,order_backlog,Decimal,(ob) Order Backlog
+optprcca,options_cancelled_price,Decimal,(optprcca) Options Cancelled - Price
+optprcex,options_exercised_price,Decimal,(optprcex) Options Exercised - Price
+optprcey,options_outstanding_end_of_year_price,Decimal,(optprcey) Options Outstanding End of Year - Price
+optprcgr,options_granted_price,Decimal,(optprcgr) Options Granted - Price
+optprcwa,options_exercisable_weighted_avg_price,Decimal,(optprcwa) Options Exercisable - Weighted Avg Price
+ppegt,property_plant_and_equipment_total_gross,Decimal,"(ppegt) Property, Plant and Equipment - Total (Gross)"
+ppenb,property_plant_and_equipment_buildings_net,Decimal,"(ppenb) Property, Plant, and Equipment - Buildings (Net)"
+ppenc,property_plant_and_equipment_construction_in_progress_net,Decimal,"(ppenc) Property, Plant, and Equipment - Construction in Progress (Net)"
+ppenli,property_plant_and_equipment_land_and_improvements_net,Decimal,"(ppenli) Property, Plant, and Equipment - Land and Improvements (Net)"
+ppenls,property_plant_and_equipment_leases_net,Decimal,"(ppenls) Property, Plant, and Equipment - Leases (Net)"
+ppenme,property_plant_and_equipment_machinery_and_equipment_net,Decimal,"(ppenme) Property, Plant, and Equipment - Machinery and Equipment (Net)"
+ppennr,property_plant_and_equipment_natural_resources_net,Decimal,"(ppennr) Property, Plant, and Equipment - Natural Resources (Net)"
+ppeno,property_plant_and_equipment_other_net,Decimal,"(ppeno) Property, Plant, and Equipment - Other (Net)"
+ppent,property_plant_and_equipment_total_net,Decimal,"(ppent) Property, Plant and Equipment - Total (Net)"
+ppevbb,property_plant_and_equipment_beginning_balance_schedule_v,Decimal,"(ppevbb) Property, Plant and Equipment - Beginning Balance (Schedule V)"
+ppeveb,property_plant_and_equipment_ending_balance_schedule_v,Decimal,"(ppeveb) Property, Plant, and Equipment - Ending Balance (Schedule V)"
+ppevo,property_plant_and_equipment_other_changes_schedule_v,Decimal,"(ppevo) Property, Plant, and Equipment - Other Changes (Schedule V)"
+ppevr,property_plant_and_equipment_retirements_schedule_v,Decimal,"(ppevr) Property, Plant and Equipment - Retirements (Schedule V)"
+prc,participation_rights_certificates,Decimal,(prc) Participation Rights Certificates
+prodv,proposed_dividends,Decimal,(prodv) Proposed Dividends
+prvt,policy_reserves_total_statutory,Decimal,(prvt) Policy Reserves - Total (Statutory)
+pstk,preferred_preference_stock_capital_total,Decimal,(pstk) Preferred/Preference Stock (Capital) - Total
+pstkc,preferred_stock_convertible,Decimal,(pstkc) Preferred Stock - Convertible
+pstkl,preferred_stock_liquidating_value,Decimal,(pstkl) Preferred Stock - Liquidating Value
+pstkn,preferred_preference_stock_nonredeemable,Decimal,(pstkn) Preferred/Preference Stock - Nonredeemable
+pstkr,preferred_preference_stock_redeemable,Decimal,(pstkr) Preferred/Preference Stock - Redeemable
+pstkrv,preferred_stock_redemption_value,Decimal,(pstkrv) Preferred Stock - Redemption Value
+pvcl,provision_credit_losses_balance_sheet,Decimal,(pvcl) Provision - Credit Losses (Balance Sheet)
+pvpl,provision_pension_liabilities,Decimal,(pvpl) Provision - Pension Liabilities
+pvt,provisions_total,Decimal,(pvt) Provisions - Total
+radp,reinsurance_assets_deposits_and_other_insurance,Decimal,(radp) Reinsurance Assets - Deposits and Other (Insurance)
+ragr,resale_agreements,Decimal,(ragr) Resale Agreements
+rari,reinsurance_assets_receivable_debtors_insurance,Decimal,(rari) Reinsurance Assets - Receivable/Debtors (Insurance)
+rati,reinsurance_assets_total_insurance,Decimal,(rati) Reinsurance Assets - Total (Insurance)
+rcl,reserves_for_credit_losses_assets,Decimal,(rcl) Reserves for Credit Losses (Assets)
+rdp,regulatory_deposits,Decimal,(rdp) Regulatory Deposits
+re,retained_earnings,Decimal,(re) Retained Earnings
+rea,retained_earnings_restatement,Decimal,(rea) Retained Earnings - Restatement
+reajo,retained_earnings_other_adjustments,Decimal,(reajo) Retained Earnings - Other Adjustments
+recco,receivables_current_other,Decimal,(recco) Receivables - Current - Other
+recd,receivables_estimated_doubtful,Decimal,(recd) Receivables - Estimated Doubtful
+rect,receivables_total,Decimal,(rect) Receivables - Total
+recta,retained_earnings_cumulative_translation_adjustment,Decimal,(recta) Retained Earnings - Cumulative Translation Adjustment
+rectr,receivables_trade,Decimal,(rectr) Receivables - Trade
+recub,unbilled_receivables,Decimal,(recub) Unbilled Receivables
+ret,total_re_property,Decimal,(ret) Total RE Property
+reuna,retained_earnings_unadjusted,Decimal,(reuna) Retained Earnings - Unadjusted
+reunr,retained_earnings_unrestricted,Decimal,(reunr) Retained Earnings - Unrestricted
+rll,reserve_for_loan_asset_losses,Decimal,(rll) Reserve for Loan/Asset Losses
+rlo,reinsurance_liabilities_other,Decimal,(rlo) Reinsurance Liabilities - Other
+rlp,reinsurance_liabilities_payables_creditors,Decimal,(rlp) Reinsurance Liabilities - Payables/Creditors
+rlri,reinsurers_liability_for_reserves_insurance,Decimal,(rlri) Reinsurers'' Liability for Reserves (Insurance)
+rlt,reinsurance_liabilities_total,Decimal,(rlt) Reinsurance Liabilities - Total
+rpag,repurchase_agreements,Decimal,(rpag) Repurchase Agreements
+rreps,reversal_restructuring_acq_basic_eps_effect,Decimal,(rreps) Reversal - Restructuring/Acq Basic EPS Effect
+rvbci,reserves_for_benefits_life_claims_insurance,Decimal,(rvbci) Reserves for Benefits - Life - Claims (Insurance)
+rvbpi,reserves_for_benefits_life_policy_insurance,Decimal,(rvbpi) Reserves for Benefits - Life - Policy (Insurance)
+rvbti,reserves_for_benefits_life_total_insurance,Decimal,(rvbti) Reserves for Benefits - Life - Total (Insurance)
+rvdo,reserves_distributable_other,Decimal,(rvdo) Reserves - Distributable - Other
+rvdt,reserves_distributable_total,Decimal,(rvdt) Reserves - Distributable - Total
+rveqt,equity_reserves_total,Decimal,(rveqt) Equity Reserves - Total
+rvlrv,revaluation_reserve,Decimal,(rvlrv) Revaluation Reserve
+rvno,reserves_nondistributable_other,Decimal,(rvno) Reserves - Nondistributable - Other
+rvnt,reserves_nondistributable_total,Decimal,(rvnt) Reserves - Nondistributable - Total
+rvri,reserves_reinsurance_insurance,Decimal,(rvri) Reserves - Reinsurance (Insurance)
+rvsi,reserves_sundry_insurance,Decimal,(rvsi) Reserves - Sundry (Insurance)
+rvti,reserves_total,Decimal,(rvti) Reserves - Total
+rvtxr,reserves_tax_regulated,Decimal,(rvtxr) Reserves - Tax-Regulated
+rvupi,reserves_for_unearned_premiums_insurance,Decimal,(rvupi) Reserves for Unearned Premiums (Insurance)
+rvutx,reserves_untaxed,Decimal,(rvutx) Reserves - Untaxed
+saa,separate_account_assets,Decimal,(saa) Separate Account Assets
+sal,separate_account_liabilities,Decimal,(sal) Separate Account Liabilities
+sbdc,securities_borrowed_and_deposited_by_customers,Decimal,(sbdc) Securities Borrowed and Deposited by Customers
+sc,securities_in_custody,Decimal,(sc) Securities In Custody
+sco,share_capital_other,Decimal,(sco) Share Capital - Other
+secu,securities_gains_losses_unrealized,Decimal,(secu) Securities Gains (Losses) - Unrealized
+seq,stockholders_equity_parent,Decimal,(seq) Stockholders Equity - Parent
+seqo,other_stockholders_equity_adjustments,Decimal,(seqo) Other Stockholders- Equity Adjustments
+srt,surplus_total_statutory,Decimal,(srt) Surplus - Total (Statutory)
+ssnp,securities_sold_not_yet_purchased,Decimal,(ssnp) Securities Sold Not Yet Purchased
+stbo,short_term_borrowings_other,Decimal,(stbo) Short-Term Borrowings - Other
+stio,short_term_investments_other,Decimal,(stio) Short-Term Investments - Other
+tdscd,trading_dealing_account_securities_corporate_debt,Decimal,(tdscd) Trading/Dealing Account Securities - Corporate Debt
+tdsce,trading_dealing_account_securities_corporate_equity,Decimal,(tdsce) Trading/Dealing Account Securities - Corporate Equity
+tdslg,trading_dealing_account_securities_local_governments,Decimal,(tdslg) Trading/Dealing Account Securities - Local Governments
+tdsmm,trading_dealing_account_securities_money_market,Decimal,(tdsmm) Trading/Dealing Account Securities - Money Market
+tdsng,trading_dealing_account_securities_national_governments,Decimal,(tdsng) Trading/Dealing Account Securities - National Governments
+tdso,trading_dealing_account_securities_other,Decimal,(tdso) Trading/Dealing Account Securities - Other
+tdss,trading_dealing_account_securities_sundry,Decimal,(tdss) Trading/Dealing Account Securities - Sundry
+tdst,trading_dealing_account_securities_total,Decimal,(tdst) Trading/Dealing Account Securities - Total
+tlcf,tax_loss_carry_forward,Decimal,(tlcf) Tax Loss Carry Forward
+transa,cumulative_translation_adjustment,Decimal,(transa) Cumulative Translation Adjustment
+tsa,treasury_stock_assets,Decimal,(tsa) Treasury Stock (Assets)
+tso,treasury_stock_other_share_capital,Decimal,(tso) Treasury Stock - Other Share Capital
+tstk,treasury_stock_total_all_capital,Decimal,(tstk) Treasury Stock - Total (All Capital)
+tstkc,treasury_stock_common,Decimal,(tstkc) Treasury Stock - Common
+tstkme,treasury_stock_book_value_memo_entry,Decimal,(tstkme) Treasury Stock Book Value - Memo Entry
+tstkp,treasury_stock_preferrred,Decimal,(tstkp) Treasury Stock - Preferrred
+txdb,deferred_taxes_balance_sheet,Decimal,(txdb) Deferred Taxes (Balance Sheet)
+txdba,deferred_tax_asset_long_term,Decimal,(txdba) Deferred Tax Asset - Long Term
+txdbca,deferred_tax_asset_current,Decimal,(txdbca) Deferred Tax Asset - Current
+txdbcl,deferred_tax_liability_current,Decimal,(txdbcl) Deferred Tax Liability - Current
+txditc,deferred_taxes_and_investment_tax_credit,Decimal,(txditc) Deferred Taxes and Investment Tax Credit
+txndb,net_deferred_tax_asset_liab_total,Decimal,(txndb) Net Deferred Tax Asset (Liab) - Total
+txndba,net_deferred_tax_asset,Decimal,(txndba) Net Deferred Tax Asset
+txndbl,net_deferred_tax_liability,Decimal,(txndbl) Net Deferred Tax Liability
+txndbr,deferred_tax_residual,Decimal,(txndbr) Deferred Tax Residual
+txp,income_taxes_payable,Decimal,(txp) Income Taxes Payable
+txr,income_tax_refund,Decimal,(txr) Income Tax Refund
+uaox,other_assets_utility,Decimal,(uaox) Other Assets - Utility
+uapt,accounts_payable_utility,Decimal,(uapt) Accounts Payable - Utility
+ucaps,paid_in_capital_other,Decimal,(ucaps) Paid in Capital - Other
+uccons,contributions_in_aid_of_construction,Decimal,(uccons) Contributions in Aid of Construction
+uceq,common_equity_total_utility,Decimal,(uceq) Common Equity Total - Utility
+ucustad,customer_advances_for_construction,Decimal,(ucustad) Customer Advances for Construction
+udcopres,deferred_credits_and_operating_reserves_other,Decimal,(udcopres) Deferred Credits and Operating Reserves - Other
+udd,debt_debentures_udd,Decimal,(udd) Debt (Debentures)
+udmb,debt_mortgage_bonds_utility,Decimal,(udmb) Debt (Mortgage Bonds) - Utility
+udolt,debt_other_long_term_utility,Decimal,(udolt) Debt (Other Long-Term) - Utility
+udpco,debt_pollution_control_obligations_utility,Decimal,(udpco) Debt (Pollution Control Obligations) - Utility
+ui,unearned_income,Decimal,(ui) Unearned Income
+uinvt,inventories_utility,Decimal,(uinvt) Inventories - Utility
+ulcm,current_liabilities_miscellaneous,Decimal,(ulcm) Current Liabilities - Miscellaneous
+ulco,current_liabilities_other_utility,Decimal,(ulco) Current Liabilities - Other - Utility
+unl,unappropriated_net_loss,Decimal,(unl) Unappropriated Net Loss
+unnp,unappropriated_net_profit_stockholders_equity,Decimal,(unnp) Unappropriated Net Profit (Stockholders'' Equity)
+unnpl,unappropriated_net_profit,Decimal,(unnpl) Unappropriated Net Profit
+uopres,operating_reserves,Decimal,(uopres) Operating Reserves
+upmcstk,premium_on_common_stock,Decimal,(upmcstk) Premium on Common Stock*
+upmpf,premium_on_preferred_stock,Decimal,(upmpf) Premium on Preferred Stock*
+upmpfs,premium_on_preference_stock,Decimal,(upmpfs) Premium on Preference Stock*
+upmsubp,premium_on_subsidiary_preferred_stock,Decimal,(upmsubp) Premium on Subsidiary Preferred Stock*
+upstk,preferred_stock_at_carrying_value,Decimal,(upstk) Preferred Stock at Carrying Value
+upstkc,preference_stock_at_carrying_value,Decimal,(upstkc) Preference Stock at Carrying Value*
+upstksf,preferred_preference_stock_sinking_fund_requirement,Decimal,(upstksf) Preferred/Preference Stock Sinking Fund Requirement
+urect,receivables_net,Decimal,(urect) Receivables (Net)
+urectr,accounts_receivable_trade_utility,Decimal,(urectr) Accounts Receivable - Trade - Utility
+urevub,accrued_unbilled_revenues_balance_sheet,Decimal,(urevub) Accrued Unbilled Revenues (Balance Sheet)
+usubpstk,subsidiary_preferred_stock_at_carrying_value,Decimal,(usubpstk) Subsidiary Preferred Stock at Carrying Value
+vpac,investments_permanent_associated_companies,Decimal,(vpac) Investments - Permanent - Associated Companies
+vpo,investments_permanent_other,Decimal,(vpo) Investments - Permanent - Other
+wcap,working_capital_balance_sheet,Decimal,(wcap) Working Capital (Balance Sheet)
+xacc,accrued_expenses,Decimal,(xacc) Accrued Expenses
+xpp,prepaid_expenses,Decimal,(xpp) Prepaid Expenses
+acchg,accounting_changes_cumulative_effect,Decimal,(acchg) Accounting Changes - Cumulative Effect
+adpac,amortization_of_deferred_policy_acquisition_costs,Decimal,(adpac) Amortization of Deferred Policy Acquisition Costs
+am,amortization_of_intangibles,Decimal,(am) Amortization of Intangibles
+amdc,amortization_of_deferred_charges,Decimal,(amdc) Amortization of Deferred Charges
+amgw,amortization_of_goodwill,Decimal,(amgw) Amortization of Goodwill
+aqa,acquisition_merger_after_tax,Decimal,(aqa) Acquisition/Merger After-tax
+aqd,acquisition_merger_diluted_eps_effect,Decimal,(aqd) Acquisition/Merger Diluted EPS Effect
+aqeps,acquisition_merger_basic_eps_effect,Decimal,(aqeps) Acquisition/Merger Basic EPS Effect
+aqi,acquisitions_income_contribution,Decimal,(aqi) Acquisitions - Income Contribution
+aqp,acquisition_merger_pretax,Decimal,(aqp) Acquisition/Merger Pretax
+aqs,acquisitions_sales_contribution,Decimal,(aqs) Acquisitions - Sales Contribution
+arce,as_reported_core_after_tax,Decimal,(arce) As Reported Core - After-tax
+arced,as_reported_core_diluted_eps_effect,Decimal,(arced) As Reported Core - Diluted EPS Effect
+arceeps,as_reported_core_basic_eps_effect,Decimal,(arceeps) As Reported Core - Basic EPS Effect
+autxr,appropriations_to_untaxed_reserves,Decimal,(autxr) Appropriations to Untaxed Reserves
+balr,benefits_assumed_life,Decimal,(balr) Benefits Assumed - Life
+banlr,benefits_assumed_nonlife,Decimal,(banlr) Benefits Assumed - Nonlife
+batr,benefits_assumed_total,Decimal,(batr) Benefits Assumed - Total
+bcef,brokerage_clearing_and_exchange_fees,Decimal,"(bcef) Brokerage, Clearing and Exchange Fees"
+bclr,benefits_ceded_life,Decimal,(bclr) Benefits Ceded - Life
+bcltbl,benefits_and_claims_total_business_line,Decimal,(bcltbl) Benefits and Claims - Total (Business Line)
+bcnlr,benefits_ceded_nonlife,Decimal,(bcnlr) Benefits Ceded - Nonlife
+bcrbl,benefits_and_claims_reinsurance_business_line,Decimal,(bcrbl) Benefits and Claims - Reinsurance (Business Line)
+bct,benefits_and_claims_total_insurance,Decimal,(bct) Benefits and Claims - Total (Insurance)
+bctbl,benefits_and_claims_other_business_line,Decimal,(bctbl) Benefits and Claims - Other (Business Line)
+bctr,benefits_ceded_total,Decimal,(bctr) Benefits Ceded - Total
+bltbl,benefits_life_total_business_line,Decimal,(bltbl) Benefits - Life - Total (Business Line)
+cbi,claims_incurred_insurance,Decimal,(cbi) Claims Incurred - Insurance
+cdpac,capitalized_deferred_polcy_acquisition_costs,Decimal,(cdpac) Capitalized Deferred Polcy Acquisition Costs
+cfbd,commissions_and_fees_broker_dealer,Decimal,(cfbd) Commissions and Fees - (Broker/Dealer)
+cfere,commissions_and_fees_real_estate,Decimal,(cfere) Commissions and Fees - (Real Estate)
+cfo,commissions_and_fees_other,Decimal,(cfo) Commissions and Fees - Other
+cfpdo,commissions_and_fees_paid_other,Decimal,(cfpdo) Commissions and Fees Paid - Other
+cga,capital_gains_after_tax,Decimal,(cga) Capital Gains - After-Tax
+cgri,capital_gains_realized_insurance,Decimal,(cgri) Capital Gains - Realized (Insurance)
+cgti,capital_gains_total_insurance,Decimal,(cgti) Capital Gains - Total (Insurance)
+cgui,capital_gains_unrealized_insurance,Decimal,(cgui) Capital Gains - Unrealized (Insurance)
+cibegni,comp_inc_beginning_net_income,Decimal,(cibegni) Comp Inc - Beginning Net Income
+cicurr,comp_inc_currency_trans_adj,Decimal,(cicurr) Comp Inc - Currency Trans Adj
+cidergl,comp_inc_derivative_gains_losses,Decimal,(cidergl) Comp Inc - Derivative Gains/Losses
+ciother,comp_inc_other_adj,Decimal,(ciother) Comp Inc - Other Adj
+cipen,comp_inc_minimum_pension_adj,Decimal,(cipen) Comp Inc - Minimum Pension Adj
+cisecgl,comp_inc_securities_gains_losses,Decimal,(cisecgl) Comp Inc - Securities Gains/Losses
+citotal,comprehensive_income_parent,Decimal,(citotal) Comprehensive Income - Parent
+cnltbl,claims_non_life_total_business_line,Decimal,(cnltbl) Claims - Non-Life - Total (Business Line)
+cogs,cost_of_goods_sold,Decimal,(cogs) Cost of Goods Sold
+cpcbl,commercial_property_and_casualty_claims_business_line,Decimal,(cpcbl) Commercial Property and Casualty Claims (Business Line)
+cpdoi,claims_paid_other,Decimal,(cpdoi) Claims Paid - Other
+cpnli,claims_paid_non_life,Decimal,(cpnli) Claims Paid - Non-Life
+cppbl,commercial_property_and_casualty_premiums_business_line,Decimal,(cppbl) Commercial Property and Casualty Premiums (Business Line)
+cprei,claims_paid_reinsurance,Decimal,(cprei) Claims Paid - Reinsurance
+cstke,common_stock_equivalents_dollar_savings,Decimal,(cstke) Common Stock Equivalents - Dollar Savings
+dbi,death_benefits_insurance,Decimal,(dbi) Death Benefits - Insurance
+dfxa,depreciation_of_tangible_fixed_assets,Decimal,(dfxa) Depreciation of Tangible Fixed Assets
+diladj,dilution_adjustment,Decimal,(diladj) Dilution Adjustment
+dilavx,dilution_available_excluding_extraordinary_items,Decimal,(dilavx) Dilution Available - Excluding Extraordinary Items
+do,discontinued_operations,Decimal,(do) Discontinued Operations
+donr,nonrecurring_disc_operations,Decimal,(donr) Nonrecurring Disc Operations
+dp,depreciation_and_amortization,Decimal,(dp) Depreciation and Amortization
+dpret,depr_amort_of_property,Decimal,(dpret) Depr/Amort of Property
+dtea,extinguishment_of_debt_after_tax,Decimal,(dtea) Extinguishment of Debt After-tax
+dted,extinguishment_of_debt_diluted_eps_effect,Decimal,(dted) Extinguishment of Debt Diluted EPS Effect
+dteeps,extinguishment_of_debt_basic_eps_effect,Decimal,(dteeps) Extinguishment of Debt Basic EPS Effect
+dtep,extinguishment_of_debt_pretax,Decimal,(dtep) Extinguishment of Debt Pretax
+dvc,dividends_common_ordinary,Decimal,(dvc) Dividends Common/Ordinary
+dvdnp,dividends_declared_and_not_provided,Decimal,(dvdnp) Dividends Declared and Not Provided
+dvp,dividends_preferred_preference,Decimal,(dvp) Dividends - Preferred/Preference
+dvpd,cash_dividends_paid,Decimal,(dvpd) Cash Dividends Paid
+dvpdp,dividends_and_bonuses_paid_policyholders,Decimal,(dvpdp) Dividends and Bonuses Paid Policyholders
+dvrpiv,dividends_received_from_permanent_investments,Decimal,(dvrpiv) Dividends Received from Permanent Investments
+dvrre,development_revenue_real_estate,Decimal,(dvrre) Development Revenue (Real Estate)
+dvsco,dividends_share_capital_other,Decimal,(dvsco) Dividends - Share Capital - Other
+dvt,dividends_total,Decimal,(dvt) Dividends - Total
+ebit,earnings_before_interest_and_taxes,Decimal,(ebit) Earnings Before Interest and Taxes
+ebitda,earnings_before_interest,Decimal,(ebitda) Earnings Before Interest
+eiea,equity_in_earnings_after_tax,Decimal,(eiea) Equity in Earnings - After-Tax
+emol,directors_emoluments,Decimal,(emol) Directors'' Emoluments
+epsfi,earnings_per_share_diluted_including_extraordinary_items,Decimal,(epsfi) Earnings Per Share (Diluted) - Including Extraordinary Items
+epsfx,earnings_per_share_diluted_excluding_extraordinary_items,Decimal,(epsfx) Earnings Per Share (Diluted) - Excluding Extraordinary Items
+epspi,earnings_per_share_basic_including_extraordinary_items,Decimal,(epspi) Earnings Per Share (Basic) - Including Extraordinary Items
+epspx,earnings_per_share_basic_excluding_extraordinary_items,Decimal,(epspx) Earnings Per Share (Basic) - Excluding Extraordinary Items
+esub,equity_in_earnings_unconsolidated_subsidiaries,Decimal,(esub) Equity in Earnings - Unconsolidated Subsidiaries
+fatd,fixed_assets_and_investments_disposals_gain_loss,Decimal,(fatd) Fixed Assets and Investments - Disposals - Gain (Loss)
+fca,foreign_exchange_income_loss,Decimal,(fca) Foreign Exchange Income (Loss)
+ffo,funds_from_operations_reit,Decimal,(ffo) Funds From Operations (REIT)
+gbbl,group_benefits_business_line,Decimal,(gbbl) Group Benefits (Business Line)
+gdwlam,goodwill_amortization,Decimal,(gdwlam) Goodwill Amortization
+gdwlia,impairments_of_goodwill_after_tax,Decimal,(gdwlia) Impairments of Goodwill After-tax
+gdwlid,impairments_of_goodwill_diluted_eps_effect,Decimal,(gdwlid) Impairments of Goodwill Diluted EPS Effect
+gdwlieps,impairments_of_goodwill_basic_eps_effect,Decimal,(gdwlieps) Impairments of Goodwill Basic EPS Effect
+gdwlip,impairments_of_goodwill_pretax,Decimal,(gdwlip) Impairments of Goodwill Pretax
+gla,gain_loss_after_tax,Decimal,(gla) Gain/Loss After-tax
+glcea,gain_loss_on_sale_core_earnings_adjusted_after_tax,Decimal,(glcea) Gain/Loss on Sale (Core Earnings Adjusted) After-tax
+glced,gain_loss_on_sale_core_earnings_adjusted_diluted_eps,Decimal,(glced) Gain/Loss on Sale (Core Earnings Adjusted) Diluted EPS
+glceeps,gain_loss_on_sale_core_earnings_adjusted_basic_eps_effect,Decimal,(glceeps) Gain/Loss on Sale (Core Earnings Adjusted) Basic EPS Effect
+glcep,gain_loss_on_sale_core_earnings_adjusted_pretax,Decimal,(glcep) Gain/Loss on Sale (Core Earnings Adjusted) Pretax
+gld,gain_loss_diluted_eps_effect,Decimal,(gld) Gain/Loss Diluted EPS Effect
+gleps,gain_loss_basic_eps_effect,Decimal,(gleps) Gain/Loss Basic EPS Effect
+glp,gain_loss_pretax,Decimal,(glp) Gain/Loss Pretax
+gp,gross_profit_loss,Decimal,(gp) Gross Profit (Loss)
+gphbl,group_premiums_health_business_line,Decimal,(gphbl) Group Premiums - Health (Business Line)
+gplbl,group_premiums_life_business_line,Decimal,(gplbl) Group Premiums - Life (Business Line)
+gpobl,group_premiums_other_business_line,Decimal,(gpobl) Group Premiums - Other (Business Line)
+gprbl,group_premiums_retirement_benefits_business_line,Decimal,(gprbl) Group Premiums - Retirement Benefits (Business Line)
+gptbl,group_premiums_total_business_line,Decimal,(gptbl) Group Premiums - Total (Business Line)
+gwo,goodwill_written_off,Decimal,(gwo) Goodwill Written Off
+hedgegl,gain_loss_on_ineffective_hedges,Decimal,(hedgegl) Gain/Loss on Ineffective Hedges
+ib,income_before_extraordinary_items,Decimal,(ib) Income Before Extraordinary Items
+ibadj,income_before_extraordinary_items_adjusted_for_common_stock_equivalents,Decimal,(ibadj) Income Before Extraordinary Items - Adjusted for Common Stock Equivalents
+ibbl,individual_benefits_business_line,Decimal,(ibbl) Individual Benefits (Business Line)
+ibcom,income_before_extraordinary_items_available_for_common,Decimal,(ibcom) Income Before Extraordinary Items - Available for Common
+ibki,investment_banking_income,Decimal,(ibki) Investment Banking Income
+idiis,interest_and_dividend_income_investment_securities,Decimal,(idiis) Interest and Dividend Income - Investment Securities
+idilb,interest_and_dividend_income_loans_claims_advances_banks,Decimal,(idilb) Interest and Dividend Income - Loans/Claims/Advances - Banks
+idilc,interest_and_dividend_income_loans_claims_advances_customers,Decimal,(idilc) Interest and Dividend Income - Loans/Claims/Advances - Customers
+idis,interest_and_dividend_income_sundry,Decimal,(idis) Interest and Dividend Income - Sundry
+idist,interest_and_dividend_income_short_term_investments,Decimal,(idist) Interest and Dividend Income - Short-Term Investments
+idit,interest_and_related_income_total,Decimal,(idit) Interest and Related Income - Total
+idits,interest_and_dividend_income_trading_securities,Decimal,(idits) Interest and Dividend Income - Trading Securities
+iire,investment_income_real_estate,Decimal,(iire) Investment Income (Real Estate)
+initb,income_non_interest_total_bank,Decimal,(initb) Income - Non-interest - Total (Bank)
+intc,interest_capitalized,Decimal,(intc) Interest Capitalized
+iobd,income_other_broker_dealer,Decimal,(iobd) Income - Other (Broker Dealer)
+ioi,income_other_insurance,Decimal,(ioi) Income - Other (Insurance)
+iore,income_other_real_estate,Decimal,(iore) Income - Other (Real Estate)
+ipabl,individual_premiums_annuity_business_line,Decimal,(ipabl) Individual Premiums - Annuity (Business Line)
+iphbl,individual_premiums_health_business_line,Decimal,(iphbl) Individual Premiums - Health (Business Line)
+iplbl,individual_premiums_life_business_line,Decimal,(iplbl) Individual Premiums - Life (Business Line)
+ipobl,individual_premiums_other_business_line,Decimal,(ipobl) Individual Premiums - Other (Business Line)
+iptbl,individual_premiums_total_business_line,Decimal,(iptbl) Individual Premiums - Total (Business Line)
+ipti,insurance_premiums_total_insurance,Decimal,(ipti) Insurance Premiums - Total (Insurance)
+irei,interest_and_related_income_reinsurance_insurance,Decimal,(irei) Interest and Related Income - Reinsurance (Insurance)
+irent,rental_income,Decimal,(irent) Rental Income
+irii,interest_and_related_income_insurance,Decimal,(irii) Interest and Related Income (Insurance)
+irli,interest_and_related_income_life_insurance,Decimal,(irli) Interest and Related Income - Life (Insurance)
+irnli,interest_and_related_income_non_life_insurance,Decimal,(irnli) Interest and Related Income - Non-Life (Insurance)
+irsi,interest_and_related_income_sundry_insurance,Decimal,(irsi) Interest and Related Income - Sundry (Insurance)
+isgr,investment_securities_gain_loss_realized,Decimal,(isgr) Investment Securities - Gain (Loss) - Realized
+isgt,investment_securities_gain_loss_total,Decimal,(isgt) Investment Securities - Gain (Loss) - Total
+isgu,investment_securities_gain_loss_unrealized,Decimal,(isgu) Investment Securities - Gain (Loss) - Unrealized
+itci,investment_tax_credit_income_account,Decimal,(itci) Investment Tax Credit (Income Account)
+ivi,investment_income_total_insurance,Decimal,(ivi) Investment Income - Total (Insurance)
+li,leasing_income,Decimal,(li) Leasing Income
+llrci,loan_loss_recoveries_credited_to_income,Decimal,(llrci) Loan Loss Recoveries - Credited to Income
+llrcr,loan_loss_recoveries_credited_to_reserves,Decimal,(llrcr) Loan Loss Recoveries - Credited to Reserves
+llwoci,loan_loss_written_off_charged_to_income,Decimal,(llwoci) Loan Loss Written Off - Charged to Income
+llwocr,loan_loss_written_off_charged_to_reserves,Decimal,(llwocr) Loan Loss Written Off - Charged to Reserves
+lst,life_insurance_surrenders_and_terminations,Decimal,(lst) Life Insurance Surrenders and Terminations
+mii,noncontrolling_interest_income_account,Decimal,(mii) Noncontrolling Interest (Income Account)
+nco,net_charge_offs,Decimal,(nco) Net Charge-Offs
+nfsr,non_financial_services_revenue,Decimal,(nfsr) Non-Financial Services Revenue
+ni,net_income_loss,Decimal,(ni) Net Income (Loss)
+niadj,net_income_adjusted_for_common_ordinary_stock_capital_equivalents,Decimal,(niadj) Net Income Adjusted for Common/Ordinary Stock (Capital) Equivalents
+nieci,net_income_effect_capitalized_interest,Decimal,(nieci) Net Income Effect Capitalized Interest
+niint,net_interest_income,Decimal,(niint) Net Interest Income
+niit,net_interest_income_tax_equivalent,Decimal,(niit) Net Interest Income (Tax Equivalent)
+nim,net_interest_margin,Decimal,(nim) Net Interest Margin
+nio,net_items_other,Decimal,(nio) Net Items - Other
+nit,net_item_total,Decimal,(nit) Net Item - Total
+nits,net_income_total_statutory,Decimal,(nits) Net Income - Total (Statutory)
+nopi,nonoperating_income_expense,Decimal,(nopi) Nonoperating Income (Expense)
+nopio,nonoperating_income_expense_other,Decimal,(nopio) Nonoperating Income (Expense) - Other
+nrtxt,nonrecurring_income_taxes_after_tax,Decimal,(nrtxt) Nonrecurring Income Taxes After-tax
+nrtxtd,nonrecurring_income_tax_diluted_eps_effect,Decimal,(nrtxtd) Nonrecurring Income Tax Diluted EPS Effect
+nrtxteps,nonrecurring_income_tax_basic_eps_effect,Decimal,(nrtxteps) Nonrecurring Income Tax Basic EPS Effect
+oiadp,operating_income_after_depreciation,Decimal,(oiadp) Operating Income After Depreciation
+oibdp,operating_income_before_depreciation,Decimal,(oibdp) Operating Income Before Depreciation
+opeps,earnings_per_share_from_operations,Decimal,(opeps) Earnings Per Share from Operations
+opili,operating_income_life,Decimal,(opili) Operating Income - Life
+opincar,operating_income_as_reported,Decimal,(opincar) Operating Income - As Reported
+opini,operating_income_non_life,Decimal,(opini) Operating Income - Non-Life
+opioi,operating_income_other,Decimal,(opioi) Operating Income - Other
+opiri,operating_income_reinsurance,Decimal,(opiri) Operating Income - Reinsurance
+opiti,operating_income_total,Decimal,(opiti) Operating Income - Total
+oprepsx,earnings_per_share_diluted_from_operations,Decimal,(oprepsx) Earnings Per Share - Diluted - from Operations
+palr,premiums_assumed_life,Decimal,(palr) Premiums Assumed - Life
+panlr,premiums_assumed_nonlife,Decimal,(panlr) Premiums Assumed - Nonlife
+patr,premiums_assumed_total,Decimal,(patr) Premiums Assumed - Total
+pcl,provision_credit_losses_income_account,Decimal,(pcl) Provision - Credit Losses (Income Account)
+pclr,premiums_ceded_life,Decimal,(pclr) Premiums Ceded - Life
+pcnlr,premiums_ceded_nonlife,Decimal,(pcnlr) Premiums Ceded - Nonlife
+pctr,premiums_ceded_total,Decimal,(pctr) Premiums Ceded - Total
+pi,pretax_income,Decimal,(pi) Pretax Income
+pidom,pretax_income_domestic,Decimal,(pidom) Pretax Income - Domestic
+pifo,pretax_income_foreign,Decimal,(pifo) Pretax Income - Foreign
+pll,provision_for_loan_asset_losses,Decimal,(pll) Provision for Loan/Asset Losses
+pltbl,premiums_life_total_business_line,Decimal,(pltbl) Premiums - Life - Total (Business Line)
+pnca,core_pension_adjustment,Decimal,(pnca) Core Pension Adjustment
+pncad,core_pension_adjustment_diluted_eps_effect,Decimal,(pncad) Core Pension Adjustment Diluted EPS Effect
+pncaeps,core_pension_adjustment_basic_eps_effect,Decimal,(pncaeps) Core Pension Adjustment Basic EPS Effect
+pncia,core_pension_interest_adjustment_after_tax,Decimal,(pncia) Core Pension Interest Adjustment After-tax
+pncid,core_pension_interest_adjustment_diluted_eps_effect,Decimal,(pncid) Core Pension Interest Adjustment Diluted EPS Effect
+pncieps,core_pension_interest_adjustment_basic_eps_effect,Decimal,(pncieps) Core Pension Interest Adjustment Basic EPS Effect
+pncip,core_pension_interest_adjustment_pretax,Decimal,(pncip) Core Pension Interest Adjustment Pretax
+pncwia,core_pension_w_o_interest_adjustment_after_tax,Decimal,(pncwia) Core Pension w/o Interest Adjustment After-tax
+pncwid,core_pension_w_o_interest_adjustment_diluted_eps_effect,Decimal,(pncwid) Core Pension w/o Interest Adjustment Diluted EPS Effect
+pncwieps,core_pension_w_o_interest_adjustment_basic_eps_effect,Decimal,(pncwieps) Core Pension w/o Interest Adjustment Basic EPS Effect
+pncwip,core_pension_w_o_interest_adjustment_pretax,Decimal,(pncwip) Core Pension w/o Interest Adjustment Pretax
+pnlbl,premiums_nonlife_total_business_line,Decimal,(pnlbl) Premiums - Nonlife - Total (Business Line)
+pnli,premiums_written_non_life,Decimal,(pnli) Premiums Written - Non-Life
+pobl,premiums_other_business_line,Decimal,(pobl) Premiums - Other (Business Line)
+ppcbl,personal_property_and_casualty_claims_business_line,Decimal,(ppcbl) Personal Property and Casualty Claims (Business Line)
+pppabl,personal_property_and_casualty_premiums_automobile_business_line,Decimal,(pppabl) Personal Property and Casualty Premiums - Automobile (Business Line)
+ppphbl,personal_property_and_casualty_premiums_homeowners_business_line,Decimal,(ppphbl) Personal Property and Casualty Premiums - Homeowners (Business Line)
+pppobl,personal_property_and_casualty_premiums_other_business_line,Decimal,(pppobl) Personal Property and Casualty Premiums - Other (Business Line)
+ppptbl,personal_property_and_casualty_premiums_total_business_line,Decimal,(ppptbl) Personal Property & Casualty Premiums - Total (Business Line)
+prca,core_post_retirement_adjustment,Decimal,(prca) Core Post Retirement Adjustment
+prcad,core_post_retirement_adjustment_diluted_eps_effect,Decimal,(prcad) Core Post Retirement Adjustment Diluted EPS Effect
+prcaeps,core_post_retirement_adjustment_basic_eps_effect,Decimal,(prcaeps) Core Post Retirement Adjustment Basic EPS Effect
+prebl,premiums_reinsurance_business_line,Decimal,(prebl) Premiums - Reinsurance (Business Line)
+pri,premiums_written_reinsurance,Decimal,(pri) Premiums Written - Reinsurance
+ptbl,premiums_total_business_line,Decimal,(ptbl) Premiums - Total (Business Line)
+ptran,principal_transactions,Decimal,(ptran) Principal Transactions
+pvo,provision_other,Decimal,(pvo) Provision - Other
+pvon,provisions_other_net,Decimal,(pvon) Provisions - Other (Net)
+pwoi,premiums_written_other,Decimal,(pwoi) Premiums Written - Other
+rca,restructuring_costs_after_tax,Decimal,(rca) Restructuring Costs After-tax
+rcd,restructuring_costs_diluted_eps_effect,Decimal,(rcd) Restructuring Costs Diluted EPS Effect
+rceps,restructuring_costs_basic_eps_effect,Decimal,(rceps) Restructuring Costs Basic EPS Effect
+rcp,restructuring_costs_pretax,Decimal,(rcp) Restructuring Costs Pretax
+rdip,in_process_r_and_d_expense,Decimal,(rdip) In Process R&D Expense
+rdipa,in_process_r_and_d_expense_after_tax,Decimal,(rdipa) In Process R&D Expense After-tax
+rdipd,in_process_r_and_d_expense_diluted_eps_effect,Decimal,(rdipd) In Process R&D Expense Diluted EPS Effect
+rdipeps,in_process_r_and_d_expense_basic_eps_effect,Decimal,(rdipeps) In Process R&D Expense Basic EPS Effect
+revt,revenue_total,Decimal,(revt) Revenue - Total
+ris,revenue_income_sundry,Decimal,(ris) Revenue/Income - Sundry
+rmum,auditors_remuneraton,Decimal,(rmum) Auditors'' Remuneraton
+rra,reversal_restructruring_acquisition_aftertax,Decimal,(rra) Reversal - Restructruring/Acquisition Aftertax
+rrd,reversal_restructuring_acq_diluted_eps_effect,Decimal,(rrd) Reversal - Restructuring/Acq Diluted EPS Effect
+rrp,reversal_restructruring_acquisition_pretax,Decimal,(rrp) Reversal - Restructruring/Acquisition Pretax
+sale,sales_turnover_net,Decimal,(sale) Sales/Turnover (Net)
+seta,settlement_litigation_insurance_after_tax,Decimal,(seta) Settlement (Litigation/Insurance) After-tax
+setd,settlement_litigation_insurance_diluted_eps_effect,Decimal,(setd) Settlement (Litigation/Insurance) Diluted EPS Effect
+seteps,settlement_litigation_insurance_basic_eps_effect,Decimal,(seteps) Settlement (Litigation/Insurance) Basic EPS Effect
+setp,settlement_litigation_insurance_pretax,Decimal,(setp) Settlement (Litigation/Insurance) Pretax
+spce,s_and_p_core_earnings,Decimal,(spce) S&P Core Earnings
+spced,s_and_p_core_earnings_eps_diluted,Decimal,(spced) S&P Core Earnings EPS Diluted
+spceeps,s_and_p_core_earnings_eps_basic,Decimal,(spceeps) S&P Core Earnings EPS Basic
+spi,special_items_spi,Decimal,(spi) Special Items
+spid,other_special_items_diluted_eps_effect,Decimal,(spid) Other Special Items Diluted EPS Effect
+spieps,other_special_items_basic_eps_effect,Decimal,(spieps) Other Special Items Basic EPS Effect
+spioa,other_special_items_after_tax,Decimal,(spioa) Other Special Items After-tax
+spiop,other_special_items_pretax,Decimal,(spiop) Other Special Items Pretax
+sret,gain_loss_on_sale_of_property,Decimal,(sret) Gain/Loss on Sale of Property
+stkco,stock_compensation_expense,Decimal,(stkco) Stock Compensation Expense
+stkcpa,after_tax_stock_compensation,Decimal,(stkcpa) After-tax stock compensation
+tdsg,trading_dealing_securities_gain_loss,Decimal,(tdsg) Trading/Dealing Securities - Gain (Loss)
+tf,trust_fees,Decimal,(tf) Trust Fees
+tie,interest_expense_total_financial_services,Decimal,(tie) Interest Expense - Total (Financial Services)
+tii,interest_income_total_financial_services,Decimal,(tii) Interest Income - Total (Financial Services)
+txc,income_taxes_current,Decimal,(txc) Income Taxes - Current
+txdfed,deferred_taxes_federal,Decimal,(txdfed) Deferred Taxes-Federal
+txdfo,deferred_taxes_foreign,Decimal,(txdfo) Deferred Taxes-Foreign
+txdi,income_taxes_deferred,Decimal,(txdi) Income Taxes - Deferred
+txds,deferred_taxes_state,Decimal,(txds) Deferred Taxes-State
+txeqa,tax_equivalent_adjustment,Decimal,(txeqa) Tax - Equivalent Adjustment
+txeqii,tax_equivalent_interest_income_gross,Decimal,(txeqii) Tax - Equivalent Interest Income (Gross)
+txfed,income_taxes_federal,Decimal,(txfed) Income Taxes - Federal
+txfo,income_taxes_foreign,Decimal,(txfo) Income Taxes - Foreign
+txo,income_taxes_other,Decimal,(txo) Income Taxes - Other
+txs,income_taxes_state,Decimal,(txs) Income Taxes - State
+txt,income_taxes_total,Decimal,(txt) Income Taxes - Total
+txva,value_added_taxes,Decimal,(txva) Value Added Taxes
+txw,excise_taxes,Decimal,(txw) Excise Taxes
+udpfa,depreciation_of_fixed_assets,Decimal,(udpfa) Depreciation of Fixed Assets
+udvp,preferred_dividend_requirements,Decimal,(udvp) Preferred Dividend Requirements
+ugi,gross_income_income_before_interest_charges,Decimal,(ugi) Gross Income (Income Before Interest Charges)
+uniami,net_income_before_extraordinary_items_and_after_noncontrolling_interest,Decimal,(uniami) Net Income before Extraordinary Items and after Noncontrolling Interest
+unopinc,nonoperating_income_net_other,Decimal,(unopinc) Nonoperating Income (Net) - Other
+uopi,operating_income_total_utility,Decimal,(uopi) Operating Income - Total - Utility
+updvp,preference_dividend_requirements,Decimal,(updvp) Preference Dividend Requirements*
+uspi,special_items_uspi,Decimal,(uspi) Special Items
+usubdvp,subsidiary_preferred_dividends,Decimal,(usubdvp) Subsidiary Preferred Dividends
+utme,maintenance_expense_total,Decimal,(utme) Maintenance Expense - Total
+utxfed,current_taxes_federal_operating,Decimal,(utxfed) Current Taxes - Federal (Operating)
+uxinst,interest_on_short_term_debt_utility,Decimal,(uxinst) Interest On Short-Term Debt - Utility
+uxintd,interest_on_long_term_debt,Decimal,(uxintd) Interest on Long-Term Debt*
+wda,writedowns_after_tax,Decimal,(wda) Writedowns After-tax
+wdd,writedowns_diluted_eps_effect,Decimal,(wdd) Writedowns Diluted EPS Effect
+wdeps,writedowns_basic_eps_effect,Decimal,(wdeps) Writedowns Basic EPS Effect
+wdp,writedowns_pretax,Decimal,(wdp) Writedowns Pretax
+xad,advertising_expense,Decimal,(xad) Advertising Expense
+xago,administrative_and_general_expense_other,Decimal,(xago) Administrative and General Expense - Other
+xagt,administrative_and_general_expense_total,Decimal,(xagt) Administrative and General Expense - Total
+xcom,communications_expense,Decimal,(xcom) Communications Expense
+xcomi,commissions_expense_insurance,Decimal,(xcomi) Commissions Expense (Insurance)
+xdepl,depletion_expense_schedule_vi,Decimal,(xdepl) Depletion Expense (Schedule VI)
+xdp,depreciation_expense_schedule_vi,Decimal,(xdp) Depreciation Expense (Schedule VI)
+xdvre,expense_development_real_estate,Decimal,(xdvre) Expense - Development (Real Estate)
+xeqo,equipment_and_occupancy_expense,Decimal,(xeqo) Equipment and Occupancy Expense
+xi,extraordinary_items,Decimal,(xi) Extraordinary Items
+xido,extraordinary_items_and_discontinued_operations,Decimal,(xido) Extraordinary Items and Discontinued Operations
+xindb,interest_expense_deposits_banks,Decimal,(xindb) Interest Expense - Deposits - Banks
+xindc,interest_expense_deposits_customer,Decimal,(xindc) Interest Expense - Deposits - Customer
+xins,interest_expense_sundry,Decimal,(xins) Interest Expense - Sundry
+xinst,interest_expense_short_term_borrowings,Decimal,(xinst) Interest Expense - Short-Term Borrowings
+xint,interest_and_related_expense_total,Decimal,(xint) Interest and Related Expense - Total
+xintd,interest_expense_long_term_debt,Decimal,(xintd) Interest Expense - Long-Term Debt
+xintopt,implied_option_expense,Decimal,(xintopt) Implied Option Expense
+xivi,investment_expense_insurance,Decimal,(xivi) Investment Expense (Insurance)
+xivre,expense_investment_real_estate,Decimal,(xivre) Expense - Investment (Real Estate)
+xlr,staff_expense_total,Decimal,(xlr) Staff Expense - Total
+xnbi,other_insurance_expense,Decimal,(xnbi) Other Insurance Expense
+xnf,non_financial_services_expense,Decimal,(xnf) Non-Financial Services Expense
+xnins,other_expense_noninsurance,Decimal,(xnins) Other Expense - Noninsurance
+xnitb,expense_noninterest_total_bank,Decimal,(xnitb) Expense - Noninterest - Total (Bank)
+xobd,expense_other_broker_dealer,Decimal,(xobd) Expense - Other (Broker/Dealer)
+xoi,expenses_other_insurance,Decimal,(xoi) Expenses - Other (Insurance)
+xopr,operating_expenses_total,Decimal,(xopr) Operating Expenses - Total
+xoprar,operatings_expenses_as_reported,Decimal,(xoprar) Operatings Expenses - As Reported
+xoptd,implied_option_eps_diluted,Decimal,(xoptd) Implied Option EPS Diluted
+xopteps,implied_option_eps_basic,Decimal,(xopteps) Implied Option EPS Basic
+xore,expense_other_real_estate,Decimal,(xore) Expense - Other (Real Estate)
+xpr,pension_and_retirement_expense,Decimal,(xpr) Pension and Retirement Expense
+xrd,research_and_development_expense,Decimal,(xrd) Research and Development Expense
+xrent,rental_expense,Decimal,(xrent) Rental Expense
+xs,expense_sundry,Decimal,(xs) Expense - Sundry
+xsga,selling_general_and_administrative_expense,Decimal,"(xsga) Selling, General and Administrative Expense"
+xstf,staff_expense_income_account,Decimal,(xstf) Staff Expense (Income Account)
+xstfo,staff_expense_other,Decimal,(xstfo) Staff Expense - Other
+xstfws,staff_expense_wages_and_salaries,Decimal,(xstfws) Staff Expense - Wages and Salaries
+xt,expense_total,Decimal,(xt) Expense - Total
+xuw,other_underwriting_expenses_insurance,Decimal,(xuw) Other Underwriting Expenses - Insurance
+xuwli,underwriting_expense_life,Decimal,(xuwli) Underwriting Expense - Life
+xuwnli,underwriting_expense_non_life,Decimal,(xuwnli) Underwriting Expense - Non-Life
+xuwoi,underwriting_expense_other,Decimal,(xuwoi) Underwriting Expense - Other
+xuwrei,underwriting_expense_reinsurance,Decimal,(xuwrei) Underwriting Expense - Reinsurance
+xuwti,underwriting_expense_total,Decimal,(xuwti) Underwriting Expense - Total
+afudcc,allowance_for_funds_used_during_construction_cash_flow,Decimal,(afudcc) Allowance for Funds Used During Construction (Cash Flow)
+afudci,allowance_for_funds_used_during_construction_investing_cash_flow,Decimal,(afudci) Allowance for Funds Used During Construction (Investing) (Cash Flow)
+amc,amortization_cash_flow_utility,Decimal,(amc) Amortization (Cash Flow) - Utility
+aoloch,assets_and_liabilities_other_net_change,Decimal,(aoloch) Assets and Liabilities - Other - Net Change
+apalch,accounts_payable_and_accrued_liabilities_increase_decrease,Decimal,(apalch) Accounts Payable and Accrued Liabilities - Increase/(Decrease)
+aqc,acquisitions,Decimal,(aqc) Acquisitions
+capx,capital_expenditures,Decimal,(capx) Capital Expenditures
+capxv,capital_expend_property_plant_and_equipment_schd_v,Decimal,"(capxv) Capital Expend Property, Plant and Equipment Schd V"
+cdvc,cash_dividends_on_common_stock_cash_flow,Decimal,(cdvc) Cash Dividends on Common Stock (Cash Flow)
+chech,cash_and_cash_equivalents_increase_decrease,Decimal,(chech) Cash and Cash Equivalents - Increase/(Decrease)
+depc,depreciation_and_depletion_cash_flow,Decimal,(depc) Depreciation and Depletion (Cash Flow)
+dlcch,current_debt_changes,Decimal,(dlcch) Current Debt - Changes
+dltis,long_term_debt_issuance,Decimal,(dltis) Long-Term Debt - Issuance
+dltr,long_term_debt_reduction,Decimal,(dltr) Long-Term Debt - Reduction
+dpc,depreciation_and_amortization_cash_flow,Decimal,(dpc) Depreciation and Amortization (Cash Flow)
+dv,cash_dividends_cash_flow,Decimal,(dv) Cash Dividends (Cash Flow)
+esubc,equity_in_net_loss_earnings,Decimal,(esubc) Equity in Net Loss - Earnings
+exre,exchange_rate_effect,Decimal,(exre) Exchange Rate Effect
+fiao,financing_activities_other,Decimal,(fiao) Financing Activities - Other
+fincf,financing_activities_net_cash_flow,Decimal,(fincf) Financing Activities - Net Cash Flow
+fopo,funds_from_operations_other,Decimal,(fopo) Funds from Operations - Other
+fopox,funds_from_operations_other_excluding_option_tax_benefit,Decimal,(fopox) Funds from Operations - Other excluding Option Tax Benefit
+fopt,funds_from_operations_total,Decimal,(fopt) Funds From Operations - Total
+fsrco,sources_of_funds_other,Decimal,(fsrco) Sources of Funds - Other
+fsrct,sources_of_funds_total,Decimal,(fsrct) Sources of Funds - Total
+fuseo,uses_of_funds_other,Decimal,(fuseo) Uses of Funds - Other
+fuset,uses_of_funds_total,Decimal,(fuset) Uses of Funds - Total
+ibc,income_before_extraordinary_items_cash_flow,Decimal,(ibc) Income Before Extraordinary Items (Cash Flow)
+intpn,interest_paid_net,Decimal,(intpn) Interest Paid - Net
+invch,inventory_decrease_increase,Decimal,(invch) Inventory - Decrease (Increase)
+itcc,investment_tax_credit_net_cash_flow_utility,Decimal,(itcc) Investment Tax Credit - Net (Cash Flow) - Utility
+ivaco,investing_activities_other,Decimal,(ivaco) Investing Activities - Other
+ivch,increase_in_investments,Decimal,(ivch) Increase in Investments
+ivncf,investing_activities_net_cash_flow,Decimal,(ivncf) Investing Activities - Net Cash Flow
+ivstch,short_term_investments_change,Decimal,(ivstch) Short-Term Investments - Change
+oancf,operating_activities_net_cash_flow,Decimal,(oancf) Operating Activities - Net Cash Flow
+pdvc,cash_dividends_on_preferred_preference_stock_cash_flow,Decimal,(pdvc) Cash Dividends on Preferred/Preference Stock (Cash Flow)
+prstkc,purchase_of_common_and_preferred_stock,Decimal,(prstkc) Purchase of Common and Preferred Stock
+prstkcc,purchase_of_common_stock_cash_flow,Decimal,(prstkcc) Purchase of Common Stock (Cash Flow)
+prstkpc,purchase_of_preferred_preference_stock_cash_flow,Decimal,(prstkpc) Purchase of Preferred/Preference Stock (Cash Flow)
+recch,accounts_receivable_decrease_increase,Decimal,(recch) Accounts Receivable - Decrease (Increase)
+scstkc,sale_of_common_stock_cash_flow,Decimal,(scstkc) Sale of Common Stock (Cash Flow)
+siv,sale_of_investments,Decimal,(siv) Sale of Investments
+sppe,sale_of_property,Decimal,(sppe) Sale of Property
+sppiv,sale_of_property_plant_and_equipment_and_investments_gain_loss,Decimal,"(sppiv) Sale of Property, Plant and Equipment and Investments - Gain (Loss)"
+spstkc,sale_of_preferred_preference_stock_cash_flow,Decimal,(spstkc) Sale of Preferred/Preference Stock (Cash Flow)
+sstk,sale_of_common_and_preferred_stock,Decimal,(sstk) Sale of Common and Preferred Stock
+tdc,deferred_income_taxes_net_cash_flow,Decimal,(tdc) Deferred Income Taxes - Net (Cash Flow)
+tsafc,total_sources_applications_of_funds_cash_flow,Decimal,(tsafc) Total Sources/Applications of Funds (Cash Flow)
+txach,income_taxes_accrued_increase_decrease,Decimal,(txach) Income Taxes - Accrued - Increase/(Decrease)
+txbco,excess_tax_benefit_stock_options_cash_flow_operating,Decimal,(txbco) Excess Tax Benefit Stock Options - Cash Flow Operating
+txbcof,excess_tax_benefit_of_stock_options_cash_flow_financing,Decimal,(txbcof) Excess Tax Benefit of Stock Options - Cash Flow Financing
+txdc,deferred_taxes_cash_flow,Decimal,(txdc) Deferred Taxes (Cash Flow)
+txpd,income_taxes_paid,Decimal,(txpd) Income Taxes Paid
+uaoloch,other_assets_and_liabilities_net_change_statement_of_cash_flows,Decimal,(uaoloch) Other Assets and Liabilities - Net Change (Statement of Cash Flows)
+udfcc,deferred_fuel_increase_decrease_statement_of_cash_flows,Decimal,(udfcc) Deferred Fuel - Increase (Decrease) (Statement of Cash Flows)
+ufretsd,funds_for_retirement_of_securities_and_short_term_debt_cash_flow,Decimal,(ufretsd) Funds for Retirement of Securities and Short-Term Debt (Cash Flow)
+unwcc,working_capital_use_increase_decrease_cash_flow,Decimal,(unwcc) Working Capital (Use) - Increase (Decrease) (Cash Flow)
+uois,other_internal_sources_net_cash_flow,Decimal,(uois) Other Internal Sources - Net (Cash Flow)
+ustdnc,short_term_debt_decrease_increase_cash_flow,Decimal,(ustdnc) Short-Term Debt - Decrease (Increase) (Cash Flow)
+utfdoc,total_funds_from_operations_cash_flow,Decimal,(utfdoc) Total Funds From Operations (Cash Flow)
+utfosc,total_funds_from_outside_sources_cash_flow,Decimal,(utfosc) Total Funds from Outside Sources (Cash Flow)
+uwkcapc,working_capital_source_decrease_increase_cash_flow,Decimal,(uwkcapc) Working Capital (Source) - Decrease (Increase) (Cash Flow)
+wcapc,working_capital_change_other_increase_decrease,Decimal,(wcapc) Working Capital Change - Other - Increase/(Decrease)
+wcapch,working_capital_change_total,Decimal,(wcapch) Working Capital Change - Total
+xidoc,extraordinary_items_and_discontinued_operations_cash_flow,Decimal,(xidoc) Extraordinary Items and Discontinued Operations (Cash Flow)
+accrt,aro_accretion_expense,Decimal,(accrt) ARO Accretion Expense
+acqao,acquired_assets_other_long_term_assets,Decimal,(acqao) Acquired Assets > Other Long-Term Assets
+acqcshi,shares_issued_for_acquisition,Decimal,(acqcshi) Shares Issued for Acquisition
+acqgdwl,acquired_assets_goodwill,Decimal,(acqgdwl) Acquired Assets - Goodwill
+acqic,acquisitions_current_income_contribution,Decimal,(acqic) Acquisitions - Current Income Contribution
+acqintan,acquired_assets_intangibles,Decimal,(acqintan) Acquired Assets - Intangibles
+acqinvt,acquired_assets_inventory,Decimal,(acqinvt) Acquired Assets - Inventory
+acqlntal,acquired_loans,Decimal,(acqlntal) Acquired Loans
+acqniintc,net_interest_income_contribution,Decimal,(acqniintc) Net Interest Income Contribution
+acqppe,acquired_assets_property_plant_and_equipment,Decimal,"(acqppe) Acquired Assets > Property, Plant & Equipment"
+acqsc,acquisitions_current_sales_contribution,Decimal,(acqsc) Acquisitions - Current Sales Contribution
+ano,assets_netting_and_other_adjustments,Decimal,(ano) Assets Netting & Other Adjustments
+aol2,assets_level2_observable,Decimal,(aol2) Assets Level2 (Observable)
+aqpl1,assets_level1_quoted_prices,Decimal,(aqpl1) Assets Level1 (Quoted Prices)
+au,auditor,Char,(au) Auditor
+aul3,assets_level3_unobservable,Decimal,(aul3) Assets Level3 (Unobservable)
+auop,auditor_opinion,Char,(auop) Auditor Opinion
+auopic,auditor_opinion_internal_control,Char,(auopic) Auditor Opinion - Internal Control
+bastr,average_short_term_borrowings_rate,Decimal,(bastr) Average Short-Term Borrowings Rate
+billexce,billings_in_excess_of_cost_and_earnings,Decimal,(billexce) Billings in Excess of Cost & Earnings
+capr1,risk_adjusted_capital_ratio_tier_1,Decimal,(capr1) Risk-Adjusted Capital Ratio - Tier 1
+capr2,risk_adjusted_capital_ratio_tier_2,Decimal,(capr2) Risk-Adjusted Capital Ratio - Tier 2
+capr3,risk_adjusted_capital_ratio_combined,Decimal,(capr3) Risk-Adjusted Capital Ratio - Combined
+capsft,capitalized_software,Decimal,(capsft) Capitalized Software
+ceiexbill,cost_and_earnings_in_excess_of_billings,Decimal,(ceiexbill) Cost & Earnings in Excess of Billings
+ceoso,chief_executive_officer_sox_certification,Char,(ceoso) Chief Executive Officer SOX Certification
+cfoso,chief_financial_officer_sox_certification,Char,(cfoso) Chief Financial Officer SOX Certification
+ci,comprehensive_income_total,Decimal,(ci) Comprehensive Income - Total
+cimii,comprehensive_income_noncontrolling_interest,Decimal,(cimii) Comprehensive Income - Noncontrolling Interest
+cshfd,common_shares_used_to_calc_earnings_per_share_fully_diluted,Decimal,(cshfd) Common Shares Used to Calc Earnings Per Share - Fully Diluted
+cshi,common_shares_issued,Decimal,(cshi) Common Shares Issued
+csho,common_shares_outstanding,Decimal,(csho) Common Shares Outstanding
+cshpri,common_shares_used_to_calculate_earnings_per_share_basic,Decimal,(cshpri) Common Shares Used to Calculate Earnings Per Share - Basic
+cshr,common_ordinary_shareholders,Decimal,(cshr) Common/Ordinary Shareholders
+cshrc,common_shares_reserved_for_conversion_convertible_debt,Decimal,(cshrc) Common Shares Reserved for Conversion - Convertible Debt
+cshrp,common_shares_reserved_for_conversion_preferred_stock,Decimal,(cshrp) Common Shares Reserved for Conversion - Preferred Stock
+cshrso,common_shares_reserved_for_conversion_stock_options,Decimal,(cshrso) Common Shares Reserved for Conversion - Stock Options
+cshrt,common_shares_reserved_for_conversion_total,Decimal,(cshrt) Common Shares Reserved for Conversion - Total
+cshrw,common_shares_reserved_for_conversion_warrants_and_other,Decimal,(cshrw) Common Shares Reserved for Conversion - Warrants and Other
+derac,derivative_assets_current,Decimal,(derac) Derivative Assets - Current
+deralt,derivative_assets_long_term,Decimal,(deralt) Derivative Assets Long-Term
+derhedgl,gains_losses_on_derivatives_and_hedging,Decimal,(derhedgl) Gains/Losses on Derivatives and Hedging
+derlc,derivative_liabilities_current,Decimal,(derlc) Derivative Liabilities- Current
+derllt,derivative_liabilities_long_term,Decimal,(derllt) Derivative Liabilities Long-Term
+dt,total_debt_including_current,Decimal,(dt) Total Debt Including Current
+dvintf,dividends_and_interest_receivable_cash_flow,Decimal,(dvintf) Dividends & Interest Receivable (Cash Flow)
+emp,employees,Decimal,(emp) Employees
+finaco,finance_division_other_current_assets_total,Decimal,"(finaco) Finance Division Other Current Assets, Total"
+finao,finance_division_other_long_term_assets_total,Decimal,"(finao) Finance Division Other Long-Term Assets, Total"
+finch,finance_division_cash,Decimal,(finch) Finance Division - Cash
+findlc,finance_division_long_term_debt_current,Decimal,(findlc) Finance Division Long-Term Debt  Current
+findlt,finance_division_debt_long_term,Decimal,(findlt) Finance Division Debt  Long-Term
+finivst,finance_division_short_term_investments,Decimal,(finivst) Finance Division  Short-Term Investments
+finlco,finance_division_other_current_liabilities_total,Decimal,"(finlco) Finance Division Other Current Liabilities, Total"
+finlto,finance_division_other_long_term_liabilities_total,Decimal,"(finlto) Finance Division Other Long Term Liabilities, Total"
+finnp,finance_division_notes_payable,Decimal,(finnp) Finance Division Notes Payable
+finrecc,finance_division_current_receivables,Decimal,(finrecc) Finance Division  Current Receivables
+finreclt,finance_division_long_term_receivables,Decimal,(finreclt) Finance Division  Long-Term Receivables
+finrev,finance_division_revenue,Decimal,(finrev) Finance Division Revenue
+finxint,finance_division_interest_expense,Decimal,(finxint) Finance Division Interest Expense
+finxopr,finance_division_operating_expense,Decimal,(finxopr) Finance Division Operating Expense
+gliv,gains_losses_on_investments,Decimal,(gliv) Gains/Losses on investments
+govtown,percent_of_gov_t_owned,Decimal,(govtown) Percent of Gov''t Owned
+ibmii,income_before_extraordinary_items_and_noncontrolling_interests,Decimal,(ibmii) Income before Extraordinary Items and Noncontrolling Interests
+lifrp,lifo_reserve_prior,Decimal,(lifrp) LIFO Reserve - Prior
+lno,liabilities_netting_and_other_adjustments,Decimal,(lno) Liabilities Netting & Other Adjustments
+lol2,liabilities_level2_observable,Decimal,(lol2) Liabilities Level2 (Observable)
+lqpl1,liabilities_level1_quoted_prices,Decimal,(lqpl1) Liabilities Level1 (Quoted Prices)
+lul3,liabilities_level3_unobservable,Decimal,(lul3) Liabilities Level3 (Unobservable)
+mibn,noncontrolling_interests_nonredeemable_balance_sheet,Decimal,(mibn) Noncontrolling Interests - Nonredeemable - Balance Sheet
+mibt,noncontrolling_interests_total_balance_sheet,Decimal,(mibt) Noncontrolling Interests - Total - Balance Sheet
+niintpfc,pro_forma_net_interest_income_current,Decimal,(niintpfc) Pro Forma Net Interest Income - Current
+niintpfp,pro_forma_net_interest_income_prior,Decimal,(niintpfp) Pro Forma Net Interest Income - Prior
+nipfc,pro_forma_net_income_current,Decimal,(nipfc) Pro Forma Net Income - Current
+nipfp,pro_forma_net_income_prior,Decimal,(nipfp) Pro Forma Net Income - Prior
+optca,options_cancelled,Decimal,(optca) Options - Cancelled (-)
+optdr,dividend_rate_assumption,Decimal,(optdr) Dividend Rate - Assumption (%)
+optex,options_exercisable_000,Decimal,(optex) Options Exercisable (000)
+optexd,options_exercised,Decimal,(optexd) Options - Exercised (-)
+optfvgr,options_fair_value_of_options_granted,Decimal,(optfvgr) Options - Fair Value of Options Granted
+optgr,options_granted,Decimal,(optgr) Options - Granted
+optlife,life_of_options_assumption_yrs,Decimal,(optlife) Life of Options - Assumption (# yrs)
+optosby,options_outstanding_beg_of_year,Decimal,(optosby) Options Outstanding - Beg of Year
+optosey,options_outstanding_end_of_year,Decimal,(optosey) Options Outstanding - End of Year
+optprcby,options_outstanding_beg_of_year_price,Decimal,(optprcby) Options Outstanding Beg of Year - Price
+optrfr,risk_free_rate_assumption,Decimal,(optrfr) Risk Free Rate - Assumption (%)
+optvol,volatility_assumption,Decimal,(optvol) Volatility - Assumption (%)
+pnrsho,nonred_pfd_shares_outs_000,Decimal,(pnrsho) Nonred Pfd Shares Outs (000)
+prsho,redeem_pfd_shares_outs_000,Decimal,(prsho) Redeem Pfd Shares Outs (000)
+rank,rank_auditor,Int,(rank) Rank - Auditor
+rstche,restricted_cash_and_investments_current,Decimal,(rstche) Restricted Cash & Investments - Current
+rstchelt,long_term_restricted_cash_and_investments,Decimal,(rstchelt) Long-Term Restricted Cash & Investments
+salepfc,pro_forma_net_sales_current_year,Decimal,(salepfc) Pro Forma Net Sales - Current Year
+salepfp,pro_forma_net_sales_prior_year,Decimal,(salepfp) Pro Forma Net Sales - Prior Year
+teq,stockholders_equity_total,Decimal,(teq) Stockholders Equity - Total
+tfva,total_fair_value_assets,Decimal,(tfva) Total Fair Value Assets
+tfvce,total_fair_value_changes_including_earnings,Decimal,(tfvce) Total Fair Value Changes including Earnings
+tfvl,total_fair_value_liabilities,Decimal,(tfvl) Total Fair Value Liabilities
+tstkn,treasury_stock_number_of_common_shares,Decimal,(tstkn) Treasury Stock - Number of Common Shares
+txtubadjust,other_unrecog_tax_benefit_adj,Decimal,(txtubadjust) Other Unrecog Tax Benefit Adj.
+txtubbegin,unrecog_tax_benefits_beg_of_year,Decimal,(txtubbegin) Unrecog. Tax Benefits - Beg of Year
+txtubend,unrecog_tax_benefits_end_of_year,Decimal,(txtubend) Unrecog. Tax Benefits - End of Year
+txtubmax,chg_in_unrecog_tax_benefits_max,Decimal,(txtubmax) Chg. In Unrecog. Tax Benefits - Max
+txtubmin,chg_in_unrecog_tax_benefits_min,Decimal,(txtubmin) Chg. In Unrecog. Tax Benefits - Min
+txtubposdec,decrease_current_tax_positions,Decimal,(txtubposdec) Decrease- Current Tax Positions
+txtubposinc,increase_current_tax_positions,Decimal,(txtubposinc) Increase- Current Tax Positions
+txtubpospdec,decrease_prior_tax_positions,Decimal,(txtubpospdec) Decrease- Prior Tax Positions
+txtubpospinc,increase_prior_tax_positions,Decimal,(txtubpospinc) Increase- Prior Tax Positions
+txtubsettle,settlements_with_tax_authorities,Decimal,(txtubsettle) Settlements with Tax Authorities
+txtubsoflimit,lapse_of_statute_of_limitations,Decimal,(txtubsoflimit) Lapse of Statute of Limitations
+txtubtxtr,impact_on_effective_tax_rate,Decimal,(txtubtxtr) Impact on Effective Tax Rate
+txtubxintbs,interest_and_penalties_accrued_b_s,Decimal,(txtubxintbs) Interest & Penalties Accrued - B/S
+txtubxintis,interest_and_penalties_reconized_i_s,Decimal,(txtubxintis) Interest & Penalties Reconized - I/S
+xrdp,research_and_development_prior,Decimal,(xrdp) Research & Development - Prior
+adjex_c,cumulative_adjustment_factor_by_ex_date_calendar,Decimal,(adjex_c) Cumulative Adjustment Factor by Ex-Date - Calendar
+adjex_f,cumulative_adjustment_factor_by_ex_date_fiscal,Decimal,(adjex_f) Cumulative Adjustment Factor by Ex-Date - Fiscal
+cshtr_c,common_shares_traded_annual_calendar,Decimal,(cshtr_c) Common Shares Traded - Annual - Calendar
+cshtr_f,common_shares_traded_annual_fiscal,Decimal,(cshtr_f) Common Shares Traded - Annual - Fiscal
+dvpsp_c,dividends_per_share_pay_date_calendar,Decimal,(dvpsp_c) Dividends per Share - Pay Date - Calendar
+dvpsp_f,dividends_per_share_pay_date_fiscal,Decimal,(dvpsp_f) Dividends per Share - Pay Date - Fiscal
+dvpsx_c,dividends_per_share_ex_date_calendar,Decimal,(dvpsx_c) Dividends per Share - Ex-Date - Calendar
+dvpsx_f,dividends_per_share_ex_date_fiscal,Decimal,(dvpsx_f) Dividends per Share - Ex-Date - Fiscal
+mkvalt,market_value_total_fiscal,Decimal,(mkvalt) Market Value - Total - Fiscal
+naicsh,north_america_industrial_classification_system_historical,Int,(naicsh) North America Industrial Classification System - Historical
+prcc_c,price_close_annual_calendar,Decimal,(prcc_c) Price Close - Annual - Calendar
+prcc_f,price_close_annual_fiscal,Decimal,(prcc_f) Price Close - Annual - Fiscal
+prch_c,price_high_annual_calendar,Decimal,(prch_c) Price High - Annual - Calendar
+prch_f,price_high_annual_fiscal,Decimal,(prch_f) Price High - Annual - Fiscal
+prcl_c,price_low_annual_calendar,Decimal,(prcl_c) Price Low - Annual - Calendar
+prcl_f,price_low_annual_fiscal,Decimal,(prcl_f) Price Low - Annual - Fiscal
+sich,standard_industrial_classification_historical,Int,(sich) Standard Industrial Classification - Historical

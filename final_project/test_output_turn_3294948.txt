@@ -1,0 +1,181 @@
+transcriptid=3294948
+FINAL.csv exists: True
+transcript_speaker_indices.csv exists: True
+Word counts: loaded from CSV (componentorder / transcriptcomponentid sort).
+
+n_turns=58  sum(word_counts)=9781  tokens=9781
+
+--- turn 0 (285 chars) ---
+Good morning. My name is Julianne, and I will be your conference operator today. At this time, I would like to welcome everyone to the Mastercard Inc. Third Quarter 2024 Conference Call. [Operator Instructions] Mr. Devin Corr, Head of Investor Relations, you may begin your conference.
+
+--- turn 1 (1489 chars) ---
+Thank you, Julianne. Good morning, everyone, and thank you for joining us for our third quarter 2024 earnings call. With me today is Michael Miebach, our Chief Executive Officer; and joining remotely is Sachin Mehra, our Chief Financial Officer. Following comments from Michael and Sachin, the operator will announce your opportunity to get into the queue for the Q&A session. . It is only then that the queue will open for questions. You can access our earnings release, supplemental performance dat…
+
+--- turn 2 (13501 chars) ---
+Thank you, Devin. Good morning, everyone. On Halloween, well, nothing spooky here. The headline this quarter, again, we delivered strong results across all aspects of our business. We're adding to that momentum with the announcement of 2 planned acquisitions, Recorded Future and Minna Technologies. In the third quarter, net revenues were up 14% and adjusted net income increased 13% versus a year ago. as always, on a non-GAAP currency-neutral basis. These results were underpinned by healthy consu…
+
+--- turn 3 (6709 chars) ---
+Thanks, Michael. Turning to Page 3, which shows our financial performance for the third quarter on a currency-neutral basis, excluding very applicable special items and the impact of gains and losses on our equity investments. Net revenue was up 14%, reflecting continued growth in our payment network and our value-added services and solutions. Operating expenses increased 12%, and operating income was up 15%. Net income and EPS increased 13% and 16%, respectively, primarily reflecting the strong…
+
+--- turn 4 (72 chars) ---
+Thank you, Sachin. Julianne, you may open the call up for questions now.
+
+--- turn 5 (92 chars) ---
+[Operator Instructions] Your first question comes from the line of Sanjay Sakhrani with KBW.
+
+--- turn 6 (390 chars) ---
+I'm glad you're doing well Sachin. Just A quick question on the U.S. volume uptick. I know you mentioned some of it was related to some of those items that you mentioned, but is the rest of it just the consumer picking up steam a little bit. And I'm just curious how, through your data, you've seen the consumer behave in a lower rate environment as rates go lower, do consumers spend more?
+
+--- turn 7 (1347 chars) ---
+Sanjay, thanks for the question. Hopefully, you can hear me. Look, I mean, the consumer continues to be healthy. I mean we continue to see positive trends from a consumer health standpoint. They're spending in a very healthy manner. So that's the underlying kind of basis for what you're seeing for our Q3 metrics as well as what you're seeing in the first 4 weeks of October. I will caution and say, these are the first [ 4 weeks ] of October, so they don't make the quarter. But that being said, th…
+
+--- turn 8 (71 chars) ---
+Our next question comes from the line of Tien-Tsin Huang with JPMorgan.
+
+--- turn 9 (353 chars) ---
+Okay. Great. Sachin you wouldn't miss delivering these results. I wanted to ask for Michael. I like your discussion of acceptance and the trends and the growth and the benefits there. Can you do the same maybe for tokenization and and where we are with respect to penetration growth benefits of the ecosystem and of course, benefits to Mastercard's P&L?
+
+--- turn 10 (1268 chars) ---
+Right. So tokenization cutting-edge technology, as I called it, we've been investing in for years were and the billions of transactions. Now the benefit of tokenization is pretty clear. helps on the security side, the tokenized transaction is a more secure transaction as the data will be only available for onetime use. That drives adoption across the ecosystem on the basis of higher security. This has been scaling rapidly around the world. We are in a whole range of markets around the world toda…
+
+--- turn 11 (71 chars) ---
+Our next question comes from the line of Harshita Rawat with Bernstein.
+
+--- turn 12 (575 chars) ---
+Michael, I want to ask about Mastercard's Value Added Services, specifically in cybersecurity. You made a number of investments here, including the recent recorded future deals. If I look at your large disclosure from 3 years ago, was Cyber and Intelligence was [ $3.7 billion ] in revenues that you already back then. Can you talk about how it's being sold to clients -- is it an attach on a transaction or increasingly kind of like a new adjacency for Mastercard, where you're driving synergies fro…
+
+--- turn 13 (2157 chars) ---
+Right. So when I look at our value-added services portfolio, our security solutions is a very significant share of that. Why is that? Because the world is digitizing more there's an increasing need to secure those transactions. That's a tremendous underlying secular trend for us to be involved with. It's a huge addressable market. So we built out a set of transactions related solutions over the years before the transaction after the transaction. One of the more recent ones that we talked about, …
+
+--- turn 14 (70 chars) ---
+Our next question comes from the line of Rayna Kumar with Oppenheimer.
+
+--- turn 15 (188 chars) ---
+We saw some volume acceleration in Europe, which is your largest geography in the quarter. What are you seeing in terms of macro in the region as well as potential for further share gains?
+
+--- turn 16 (1974 chars) ---
+Thanks for your question. So look, I mean, Europe is clearly a very important region. We continue to perform well in that region. What we're seeing from a macro standpoint, and you've probably seen this in the most recent economic data is you're starting to see positive trends come through there with momentum in France, in Spain and even in Germany. Look, the reality is Europe has kind of been a little bit of a tale of 2 cities. You've had Northern Europe and then you have Southern Europe. South…
+
+--- turn 17 (47 chars) ---
+I noted Sachin, that you said even in Germany .
+
+--- turn 18 (47 chars) ---
+I wouldn't miss my [ cost ] on that, Michael. .
+
+--- turn 19 (72 chars) ---
+Our next question comes from the line of Bryan Keane with Deutsche Bank.
+
+--- turn 20 (268 chars) ---
+Just want to ask about incentives. There's a little bit of a debate going on. Is incentives rising? Is there more renewals going on currently that are going to push incentives higher? I'd just like to get your thoughts around that and glad you're feeling well, Sachin.
+
+--- turn 21 (827 chars) ---
+Look, I mean, the reality is, from a competitive environment standpoint, the market continues to be competitive. We continue to compete in this environment, nothing from our perspective is vastly different from what was there call it, a year ago or 2 years ago. The reality is we'll continue to compete here. From an incentive standpoint, you're very well aware that in order to actually win volume. You're going to have to incentivize customers, which is what we do. And then when you win the volume…
+
+--- turn 22 (676 chars) ---
+And you see us winning -- if you look at what -- some of the movements here in the United States recently on the debit side, there is on the basis of our differentiated propositions we keep winning. So that resonates -- we keep investing in that, as I just spoke about. But it's also pretty clear in that competitive environment where we hope to have the better solution for our customers in the end consumer. There is not every deal is for us. And we don't want to win every deal. And there is compe…
+
+--- turn 23 (52 chars) ---
+Our next question comes from the line of Tim Chiodo.
+
+--- turn 24 (627 chars) ---
+I want to dig in a little bit on Mastercard move. So the combination of Mastercard Send and the cross-border services. Two brief topics, one around mix across that entire capability, would you describe the cross-border mix as similar, higher or lower than the rest of Mastercard's business? And then in terms of the accounting for the revenues, I believe, and maybe you could correct me that any of the domestic related activity tends to be a little bit more card-based, so it's sitting within paymen…
+
+--- turn 25 (1552 chars) ---
+Right. So maybe I start on that. So these are very different and complementary businesses. I think that's the first to think about. So obviously, we have a thriving cross-border driven part of our card business and the P2M space. We make something very complex across border, pretty simple for consumers. That's a good starting point. But there's many other use cases that are not actually happening through pods today. And as part of our one-stop strategy for payments for years. We have been invest…
+
+--- turn 26 (283 chars) ---
+And then on your question around noting you have it right. I mean the stuff which is on [ card rails ], for example, domestic and related revenues sit in payment network and then the cross-border volumes, which flow on noncard rails sitting in our value-added services and solutions.
+
+--- turn 27 (75 chars) ---
+Our next question comes from the line of Darrin Peller with Wolfe Research.
+
+--- turn 28 (754 chars) ---
+Sachin. First of all, I just want to reiterate, it's great to hear you on the call again. Guys, I just want to start off first. I mean the yield and the spread and what we're seeing in growth of transaction revenues and cross-border continuing to outperform the KPIs. I think it just shows the value add you're bringing to your customers. Can you just touch on the expansion of that? And what kind of opportunities you're seeing taken on by the customers to allow you to have those better yields rela…
+
+--- turn 29 (3404 chars) ---
+So sure, Darrin. Thanks for your questions. So let me take the tax rate question first, and I'll come back to your question around what you're seeing in terms of yield trends. So on the tax rate, look, now we see greater clarity as it relates to the implementation of the Pillar 2 global minimum tax and what what we thought -- and you've seen this in our 10-K disclosures in the past that we've had this incentive agreement with Singapore. The reality is now Singapore is actually enacted those rule…
+
+--- turn 30 (76 chars) ---
+Our next question comes from the line of James Faucette with Morgan Stanley.
+
+--- turn 31 (614 chars) ---
+I wanted to dig in a little bit into B2B and commercial volumes. I think there's been good and steady progress there over the years, including this year. But at the same time, a lot of us are surprised that there hasn't been an acceleration -- so I'm just wondering kind of how you would assess that situation and what are the tools and capabilities of Mastercard, we should think about that Mastercard is bringing to market to help accelerate that market? Or you think this is going to continue to b…
+
+--- turn 32 (2152 chars) ---
+Thank you. Great question. One of my favorite topics to talk about commercial. Earlier, I spoke about the tremendous secular opportunity we see in consumer and then build on that and said, what is an even bigger opportunity in commercial. So we like it for those reasons. As I commented on previous calls, there were various structural issues over the years. Why this hasn't really unlocked in emerging markets, there were issuers that were not familiar with the risk -- there wasn't technology that …
+
+--- turn 33 (238 chars) ---
+I'll just quickly jump in and clarify when Michael talked about the 11% growth rate in commercial. He was talking about the currency-neutral growth rate for the third quarter of this year. Just want to be sure that we have that out there.
+
+--- turn 34 (33 chars) ---
+Sachin, thank you for clarifying.
+
+--- turn 35 (73 chars) ---
+Our next question comes from the line of Craig Maurer with F.T. Partners.
+
+--- turn 36 (386 chars) ---
+And good to hear you, Sachin. I want -- there's a lot of discussion around VAS. And it's difficult for us to really get under the covers on that too much. But I wanted to ask you, Michael, if you could characterize perhaps where you think Mastercard is better than your closest competitors in VAS when you're presenting to an issuer or a merchant and it allows you to win that business?
+
+--- turn 37 (2704 chars) ---
+Right. So value-added services and solutions. It's been a true differentiator for Mastercard for the last 7 years at least. And we anchored around 2 fundamental points. I talked about 1 earlier, which is in a digitizing world, keeping that digital ecosystem in a company or in a consumer context or a bank context safes our security solutions has been a differentiator, and I think is a truly differentiated proposition. The second big underlying trend here is with highly -- and a rapidly digitizing…
+
+--- turn 38 (72 chars) ---
+Our next question comes from the line of Trevor Williams with Jefferies.
+
+--- turn 39 (328 chars) ---
+Great. With the Q4 outlook for low teens growth, if we think about that as the stepping off point for '25, is there anything in that fourth quarter growth that we should be mindful of, either working for against you that might not carry into next year? Or that a reasonable baseline for us to use as we start to think about '25?
+
+--- turn 40 (1764 chars) ---
+Sure. So first of all, we'll talk about '25 at the right time, but let me give you a little bit of color on things to think about between what you're seeing in 2024 and 2025, right? Obviously, you guys know about the leap year effect. And I know you're asking a Q4 question, but more broadly speaking, you've got the leap year effect taking place in 2024. You're not going to have that in 2025. The things which you've got to keep in mind are, number one, we've had significant share wins, which have…
+
+--- turn 41 (73 chars) ---
+Our next question comes from the line of Jamie Friedman with Susquehanna.
+
+--- turn 42 (308 chars) ---
+Let me echo my warm wishes, Sachin I wanted to ask about China, if I may. Obviously, you have high ambitions there and are well positioned and you've had some significant developments on the operating side. So I was just wondering how you're performing relative to your expectations as you roll out in China?
+
+--- turn 43 (1903 chars) ---
+Thank you. So -- we mentioned it, I think in the July call, we said we are live now in China. So we live as of May with a whole number of issuers. And we're live in China with a very unique proposition, which is a single-use card that can be used domestically as well as cross-border. We've been in China for a long time, but that was a cross-border only use case. Now this single proposition is a car that gives full global acceptance. And it gives increasing domestic acceptance through a combinati…
+
+--- turn 44 (76 chars) ---
+Our next question comes from the line of Fahed Kunwar with Redburn Atlantic.
+
+--- turn 45 (416 chars) ---
+Pass my well wishes to Sachin as well. I'd love to get just a bit more on price, and we've touched on it a few times over these questions, but you've obviously taken pricing, I think on cross-border and elements of that, but -- is there more room for pricing increases? And if we were looking across your stack and suite of products, where do you see that kind of -- what is the potential for pricing more for value?
+
+--- turn 46 (57 chars) ---
+Sorry, I just want to make sure. Can you hear me Fahed? .
+
+--- turn 47 (4 chars) ---
+Yes.
+
+--- turn 48 (1825 chars) ---
+Yes Okay. Looking to the end of the day, yes, I just wanted to be sure if you could hear me. Look, at the end of the day, I think the way you should think about our philosophy along both our investments as well as how we drive remuneration from those investments is unchanged. We've always been in the business of investing heavily in driving innovation. As we drive innovation, we deliver value to our customers and to our end merchants and consumers. And like with every other business, when you ma…
+
+--- turn 49 (71 chars) ---
+Our next question comes from the line of Ramsey El-Assal with Barclays.
+
+--- turn 50 (278 chars) ---
+Michael, I was wondering if you could give us your reaction to the DOJ antitrust suit against Visa, comment on whether you see a potential opportunity for Mastercard if the legal and regulatory kind of pressure faced by your competitor ends up shifting some market share around?
+
+--- turn 51 (1296 chars) ---
+Right. Ramzi, thanks for the question. So obviously, we all read the headlines. We saw that allegations have been made. Obviously, we can't comment on that. Our view always has been have to compete in a competitive market. We're doing it exactly in the way that Sachin just laid out, investing in our products and solutions -- that's how we win and that's what we believe in. We believe in choice back in 2016 when we stepped into real-time payments, we were clearly the first in the industry to do t…
+
+--- turn 52 (71 chars) ---
+Our next question comes from the line of Will Nance with Goldman Sachs.
+
+--- turn 53 (751 chars) ---
+I appreciate you squeezing me in here. I just wanted to kind of follow up on the earlier question around the value-added services that you're attaching just kind of transactions around the world and heard the earlier context around some of the breakouts you provided historically. But I was wondering if you could kind of talk specifically to the kind of multi-rail strategy and the embrace of new networks and just what the progress has been and where you see the most opportunity to attach your val…
+
+--- turn 54 (1934 chars) ---
+Right. It's interesting. When you look at the rise of alternative payment tools or basically the breadth of the choice that is available to consumers and businesses in terms of payments today. So you got cards, obviously, you have a counter account payments. You have digital public infrastructure, government sponsored account, you have P2P systems and so forth. So the choice is broader than ever before. If you look at the world outside of cards and you compare it to the world of card payments, w…
+
+--- turn 55 (84 chars) ---
+I think we're out of time for questions. Anything, Michael, you'd like to wrap with.
+
+--- turn 56 (734 chars) ---
+Well, I just want to thank everybody again for your support. We're looking to have you all -- and hopefully, everybody else who's not on the call to join us for the Investor Community Meeting on November 13. As I said earlier, this has been a bit of a look back on to the quarter, onto this year into the fourth quarter, And then we're going to take a further out when we get together in a couple of weeks from now. I'm excited about that. As always, everything that we share with you is the fruit of…
+
+--- turn 57 (101 chars) ---
+This concludes today's conference call. Thank you all for your participation. You may now disconnect.
+

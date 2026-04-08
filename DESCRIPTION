@@ -10,7 +10,10 @@ Language: es
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Depends: 
+    dbplyr,
     R (>= 3.5),
     RPostgres,
     tidyverse
+Imports: 
+    httr
 LazyData: true
