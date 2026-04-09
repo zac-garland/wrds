@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(python -c \":*)",
-      "Bash(python _add_event_study.py)"
+      "Bash(python _add_event_study.py)",
+      "Bash(ls \"C:/Users/ry092/Desktop/FIN 285F/wrds/final_project/\"*rio*)"
     ]
   }
 }
