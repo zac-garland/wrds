@@ -8,7 +8,15 @@
       "Bash(python _add_tqdm.py)",
       "Bash(python _fix_gpu_cache.py)",
       "Bash(python _fix_ollama_timeout.py)",
-      "Bash(rm _fix_ollama_timeout.py)"
+      "Bash(rm _fix_ollama_timeout.py)",
+      "Bash(python _fix_summary_cols.py)",
+      "Bash(rm _fix_summary_cols.py)",
+      "Bash(python _parallelize.py)",
+      "Bash(rm _parallelize.py)",
+      "Bash(python _parallelize2.py)",
+      "Bash(rm _parallelize2.py)",
+      "Bash(python _par_tfidf.py)",
+      "Bash(rm _par_tfidf.py)"
     ]
   }
 }
