@@ -6,7 +6,9 @@
       "Bash(ls \"C:/Users/ry092/Desktop/FIN 285F/wrds/final_project/\"*rio*)",
       "Bash(python _add_event_study_rio.py)",
       "Bash(python _add_tqdm.py)",
-      "Bash(python _fix_gpu_cache.py)"
+      "Bash(python _fix_gpu_cache.py)",
+      "Bash(python _fix_ollama_timeout.py)",
+      "Bash(rm _fix_ollama_timeout.py)"
     ]
   }
 }
