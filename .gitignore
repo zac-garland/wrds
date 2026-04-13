@@ -58,6 +58,7 @@ __pycache__/
 /final_project/pkl_cache/
 
 # Large CSV extracts (GitHub hard limit: 100MB/file)
+final_project/signal_df.csv
 final_project/FINAL.csv
 final_project/aggregated_all_years_updated_event.csv
 final_project/transcript_speaker_indices.csv
