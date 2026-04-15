@@ -1,0 +1,13 @@
+
+
+- the main sourc of feedback was around tying it to some form of fundamentals. 
+- the salience scoring needs more clarity. 
+- need to resolve the CAR (needs to be aligned with prior event studies and looking at market model / CAAR)
+- need to validate the portfolio methodology construction (results went against the overnight / event window findings)
+
+
+
+- the outcomes:
+need a consolidated and new workbook that allows us to split up the universe when we run a full batch. 
+- should integrate new mean_reversion.ipynb and rio's multiparallel processing for tf-idf and vectorization / embeddings, salience scoring, 
+

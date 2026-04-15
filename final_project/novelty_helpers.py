@@ -741,10 +741,11 @@ def merge_penalty_into_signal_df(
 
 
 def apply_adjusted_novelty_product(signal_df: pd.DataFrame) -> pd.DataFrame:
-    """novelty × salience × penalty_mult (current notebook specification)."""
+    """novelty × sqrt(salience) × penalty_mult (current notebook specification)."""
     out = signal_df.copy()
+    sal = pd.to_numeric(out["salience_score"], errors="coerce").fillna(0.0).clip(lower=0.0)
     out["adjusted_novelty"] = (
-        out["novelty_score"] * out["salience_score"] * out["penalty_mult"]
+        out["novelty_score"] * np.sqrt(sal) * out["penalty_mult"]
     )
     return out
 
