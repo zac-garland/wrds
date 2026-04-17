@@ -20,6 +20,59 @@ import pandas as pd
 
 DevTickers = Optional[Tuple[str, ...]]  # sorted unique uppercase, e.g. ("AAPL", "MSFT", "NVDA")
 
+# ---------------------------------------------------------------------------
+# Deterministic ticker splitting (for multi-person / multi-machine shards)
+# ---------------------------------------------------------------------------
+
+def normalize_ticker_list(tickers: Iterable[str]) -> Tuple[str, ...]:
+    """Uppercase + strip + drop empties + sort (stable deterministic ordering)."""
+    out: list[str] = []
+    for t in tickers:
+        s = str(t).strip().upper()
+        if s:
+            out.append(s)
+    return tuple(sorted(set(out)))
+
+
+def split_tickers_50_50(
+    tickers: Iterable[str],
+) -> tuple[Tuple[str, ...], Tuple[str, ...]]:
+    """
+    Deterministic 50/50 split used for shared runs.
+
+    Strategy: normalize → sort → split at midpoint.
+    - Returns (first_half, second_half) with sizes differing by at most 1.
+    - Use as: (zac, rio) = split_tickers_50_50(all_tickers)
+    """
+    t = normalize_ticker_list(tickers)
+    mid = len(t) // 2
+    return (t[:mid], t[mid:])
+
+
+def shard_tickers(
+    tickers: Iterable[str],
+    *,
+    shard: str,
+) -> Tuple[str, ...]:
+    """
+    Convenience wrapper for selecting a shard.
+
+    shard:
+      - 'zac' → first half
+      - 'rio' → second half
+      - 'all' → all tickers
+    """
+    shard = str(shard).strip().lower()
+    all_t = normalize_ticker_list(tickers)
+    if shard == "all":
+        return all_t
+    zac, rio = split_tickers_50_50(all_t)
+    if shard == "zac":
+        return zac
+    if shard == "rio":
+        return rio
+    raise ValueError("shard must be one of {'zac','rio','all'}")
+
 
 def dev_tickers_normalized(
     raw: Union[None, str, Iterable[str]],
