@@ -16,7 +16,8 @@
       "Bash(python _parallelize2.py)",
       "Bash(rm _parallelize2.py)",
       "Bash(python _par_tfidf.py)",
-      "Bash(rm _par_tfidf.py)"
+      "Bash(rm _par_tfidf.py)",
+      "Bash(python3 -c \":*)"
     ]
   }
 }
